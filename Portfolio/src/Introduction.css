@@ -1,0 +1,119 @@
+.introContainer
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    height: 70vh;
+}
+.introLeft
+{
+    width: 20vw;
+}
+.introTopicSmall
+{
+    color: var(--primary-color);
+    font-size: 1.8vw;
+    margin-bottom: 0;
+}
+.introShortDescription
+{
+    font-size: 2.2vw;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.introLongDescription
+{
+    font-size: 1.4vw;
+    margin-top: 5px;
+}
+.introMiddle
+{
+    margin-left: -3vw;
+}
+.introPic
+{
+    height: 25vw;
+}
+.introRight
+{
+    width: 12vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 1.4vw;
+    margin-top: 2vw;
+}
+.introName
+{
+    font-size: 4vw;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.introNameLine
+{
+    margin-top: -0.3vw;
+    border: 0.2vw solid var(--secondary-color);
+    width: 8vw;
+    margin-left: 2px;
+    transition: transform 0.3s ease-out;
+    transform-origin: center left;
+}
+.introNameAndLineContainer:hover .introNameLine
+{
+    transform: scale(2,1);
+}
+.introSocials
+{
+    width: max-content;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1vw;
+    margin-top: 0.5vw;
+    height: 20px;
+    
+}
+.introSocialsLinkWrapper
+{
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.introSocialsLink
+{
+    font-size: 1.3vw;
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s ease-out, font-size 0.2s ease-out;
+}
+.introSocialsLink:hover
+{
+    color: var(--primary-color);
+    font-size: 1.35vw;
+}
+.introSocialsLine
+{   
+    border: 0.08vw solid var(--secondary-color);
+    height: 1vw;
+}
+.introContactBtn
+{
+    margin-top: 2vw;
+    padding: 0.5vw;
+    width: 12vw;
+    font-size: 1.3vw;
+    font-weight: bold;
+    background-color: var(--background-primary-color);
+    color: var(--primary-color);
+    border: 0.3vw solid var(--primary-color);
+    border-radius: 90px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out;
+}
+.introContactBtn:hover
+{
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
