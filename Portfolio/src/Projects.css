@@ -1,0 +1,40 @@
+.projects
+{
+    background-color: var(--background-primary-color);
+    display: flex;
+    flex-direction: column;
+    padding-top: 1vw;
+    margin-bottom: 0;
+}
+.projectsTitle
+{
+    text-align: center;
+    font-size: 3vw;
+}
+.projectsContainer
+{
+    margin-bottom: 2vw;
+    height: 20vw;
+    display: flex;
+    flex: row;
+    justify-content: center;
+}
+.projectsLeftColumn
+{
+    margin-right: 0.5vw;
+}
+.projectsMainItem
+{
+    height: 20vw;
+}
+.projectsRightColumn
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4vw;
+}
+.projectsSecondaryItem
+{
+    height: 9.8vw;
+}
