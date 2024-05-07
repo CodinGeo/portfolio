@@ -1,21 +1,21 @@
 .navContainer
 {
-    width:35%;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--background-primary-color);
-    border: 2px solid var(--primary-color);
-    border-radius: 60px;
+    top: 1.05vh;
     display: flex;
     justify-content: space-evenly;
     position: sticky;
-    top: 1.05vh;
+    width:35%;
+    background-color: var(--background-primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 60px;
 }
 .navItem
 {
-    background-color: var(--background-primary-color);
     float: left;
     width: 33.3%;
+    background-color: var(--background-primary-color);
     text-align: center;
     transition: background-color 0.2s ease-out;
 }
@@ -29,20 +29,20 @@
 }
 .navItem:first-child
 {
-    border-radius: 60px 0 0 60px;
     border-right: 2px solid var(--primary-color);
+    border-radius: 60px 0 0 60px;
 }
 .navItem:last-child
 {
-    border-radius: 0 60px 60px 0;
     border-left: 2px solid var(--primary-color);
+    border-radius: 0 60px 60px 0;
 }
 .navItem > .navLink
 {
-    color: var(--primary-color);
-    font-size:1.3vw;
     margin-top: 1.2vh;
     margin-bottom: 1.2vh;
+    font-size:1.3vw;
+    color: var(--primary-color);
     transition: color 0.2s ease-out;
 }
 .navItemActive

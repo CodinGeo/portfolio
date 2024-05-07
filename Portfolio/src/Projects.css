@@ -1,70 +1,71 @@
+/* Projects Item Title*/
+.projectsListItemTitleContainer
+{
+    top: 0;
+    margin: 0;
+    z-index: 1;
+    position: absolute;
+}
+.projectsListItemTitle
+{
+    margin: 0;
+    opacity: 0;
+    color: white;
+    transition: opacity 0.2s ease-out;
+}
+
+/*Projects Item*/
+.projectsListItemContainer
+{
+    padding: 0;
+    position: relative;
+    transition: opacity 0.2s ease-out;
+}
+.projectsListItem
+{
+    position: relative;
+    z-index: 0;
+    transition: opacity 0.2s ease-out;
+}
+.projectsListItemContainer:hover .projectsListItem
+{
+    opacity: 0.6;
+}
+.projectsListItemContainer:hover .projectsListItemTitle
+{
+    opacity: 1;
+}
+
+/*Projects*/
 .projects
 {
-    background-color: var(--background-primary-color);
+    margin-bottom: 0;
+    padding-top: 1vw;
     display: flex;
     flex-direction: column;
-    padding-top: 1vw;
-    margin-bottom: 0;
+    background-color: var(--background-primary-color);
 }
 .projectsTitle
 {
     text-align: center;
     font-size: 3vw;
 }
-.projectsContainer
+.projectsListContainer
 {
     margin-bottom: 2vw;
-    height: 20vw;
     display: flex;
     flex: row;
     justify-content: center;
+    height: 20vw;
 }
-.projectsLeftColumn
+.projectsListLeftColumn
 {
     margin-right: 0.5vw;
 }
-.projectsItemContainer
-{
-    transition: opacity 0.2s ease-out;
-    position: relative;
-    padding: 0;
-}
-.projectsItemContainer:hover
-{
-    opacity: 0.6;
-}
-.projectsItemContainer:hover .projectsItemTitle
-{
-    opacity: 1;
-}
-.projectsMainItem
-{
-    height: 20vw;
-    position: relative;
-    z-index: 0;
-}
-.projectsItemTitleContainer
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    margin: 0;
-}
-.projectsItemTitle
-{
-    opacity: 0;
-    transition: opacity 0.2s ease-out;
-    margin: 0;
-}
-.projectsRightColumn
+.projectsListRightColumn
 {
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 0.4vw;
-}
-.projectsSecondaryItem
-{
-    height: 9.8vw;
 }
