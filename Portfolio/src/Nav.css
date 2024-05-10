@@ -8,34 +8,38 @@
     position: sticky;
     width:35%;
     background-color: var(--background-primary-color);
-    border: 2px solid var(--primary-color);
-    border-radius: 60px;
 }
 .navItem
 {
     float: left;
     width: 33.3%;
-    background-color: var(--background-primary-color);
     text-align: center;
-    transition: background-color 0.2s ease-out;
-}
-.navItem:hover
-{
-    background-color: var(--secondary-color);
-}
-.navItem:hover .navLink
-{
-    color: white;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
 }
 .navItem:first-child
 {
-    border-right: 2px solid var(--primary-color);
+    border-left: 2px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
     border-radius: 60px 0 0 60px;
 }
 .navItem:last-child
 {
-    border-left: 2px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
     border-radius: 0 60px 60px 0;
+}
+.navItem:hover
+{
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.navItem:hover .navLink
+{
+    color: white;
 }
 .navItem > .navLink
 {

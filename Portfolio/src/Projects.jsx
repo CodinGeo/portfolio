@@ -4,17 +4,13 @@ import spPage from './assets/sp37Pagev2.mp4';
 import zsoPage from './assets/zso8Pagev2.mp4';
 function Projects()
 {
-    const ProjectsItemTitle = (props) => {
-        return(
-            <div className="projectsListItemTitleContainer">
-                <h3 className="projectsListItemTitle" style={{fontSize: props.size==="large"?'4.5vw':'2.5vw'}}>{props.text}</h3>
-            </div>);
-    }
     const ProjectItem = (props) => {
         return(
             <div className="projectsListItemContainer">
-                <video className="projectsListItem" style={{height: props.size==="large"?'20vw':'9.65vw'}} src={props.src} type="video/mp4" autoPlay="autoplay" muted loop/>
-                <ProjectsItemTitle text={props.title} size={props.size}/>
+                <video className="projectsListItem" style={{height: props.size==="large"?'20vw':'9.8vw'}} src={props.src} type="video/mp4" autoPlay="autoplay" muted loop/>
+                <div className="projectsListItemTitleContainer">
+                    <h3 className="projectsListItemTitle" style={{fontSize: props.size==="large"?'4.5vw':'2.2vw'}}>{props.title}</h3>
+                </div>
             </div>);
     }
     return(
