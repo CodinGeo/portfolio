@@ -40,14 +40,15 @@
 .projects
 {
     margin-bottom: 0;
-    padding-top: 1vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
     display: flex;
     flex-direction: column;
     background-color: var(--background-primary-color);
 }
 .projectsTitle
 {
-    margin-top: 3vw;
+    margin-bottom: 3vw;
     text-align: center;
     font-size: 3vw;
     color: var(--primary-color);

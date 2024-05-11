@@ -1,12 +1,12 @@
 .aboutCardContainer
 {
-    margin: 0;
+    padding-top: 5%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: fit-content;
+    height: 80vh;
     background-color: var(--background-secondary-color);
 }
 .aboutCardPicWrapper

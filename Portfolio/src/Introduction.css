@@ -3,7 +3,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 2vw;
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
     width: 60vw;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@
 {
     margin-bottom: 0;
     font-size: 1.8vw;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 .introShortDescription
 {
@@ -58,7 +58,7 @@
     margin-left: 2px;
     transform-origin: center left;
     width: 8vw;
-    border: 0.2vw solid var(--secondary-color);
+    border: 0.2vw solid var(--primary-color);
     transition: transform 0.3s ease-out;
 
 }
@@ -96,7 +96,7 @@
 }
 .introSocialsLine
 {   
-    border: 0.08vw solid var(--secondary-color);
+    border: 0.08vw solid var(--primary-color);
     height: 1vw;
 }
 .introContactBtn
@@ -110,11 +110,12 @@
     color: var(--primary-color);
     border: 0.3vw solid var(--primary-color);
     border-radius: 90px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out, border-color 0.2s ease-out;
 }
 .introContactBtn:hover
 {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: white;
+    border-color: var(--secondary-color);
     transform: scale(1.05);
 }

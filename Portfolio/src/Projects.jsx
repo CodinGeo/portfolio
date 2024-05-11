@@ -31,6 +31,7 @@ function Projects()
                 </a>
             </div>
         </div>
-    </section>);
+    </section>
+    );
 }
 export default Projects;
