@@ -7,9 +7,13 @@
 {
     --primary-color: #7EF9C2;
     --secondary-color: #4EC992;
-    --background-primary-color: #1E2D2F;
-    --background-secondary-color: #041F1E;
+    --background-primary-color: #041F1E;
+    --background-secondary-color: #19282A;
     background-color: var(--background-primary-color);
     font-family: 'Rubik', 'Arial', sans-serif;
     color: white;
+}
+h2
+{
+    font-size: 4vw;
 }

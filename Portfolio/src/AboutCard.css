@@ -1,6 +1,7 @@
 .aboutCardContainer
 {
-    padding-top: 5%;
+    padding-top: 5vw;
+    padding-bottom: 3vw;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -28,7 +29,6 @@
 .aboutCardTitle
 {
     color: var(--primary-color);
-    font-size: 3vw;
 }
 .aboutCardDesc
 {

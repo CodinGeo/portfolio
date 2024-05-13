@@ -3,6 +3,7 @@ import Introduction from './Introduction.jsx';
 import AboutCard from './AboutCard.jsx';
 import Projects from './Projects.jsx';
 import Footer from './Footer.jsx';
+import Contact from './Contact.jsx';
 import './App.css';
 import  './fonts/Rubik-VariableFont_wght.ttf';
 import {motion, useScroll, useTransform} from 'framer-motion';
@@ -14,9 +15,10 @@ function App()
     target: ref,
     offset: ["start start", "end start"],
   });
-  const introY=useTransform(scrollYProgress, [0,1], ["0%", "100%"]);
+  const introY=useTransform(scrollYProgress, [0,1], ["0%", "200%"]);
   const aboutY=useTransform(scrollYProgress, [0,1], ["0%", "-100%"]);
   const projectsY=useTransform(scrollYProgress, [0,1], ["0%", "-100%"]);
+  const contactY=useTransform(scrollYProgress, [0,1], ["0%", "-100%"]);
   return(<>
     
     <main ref={ref}>
@@ -29,6 +31,9 @@ function App()
       </motion.div>
       <motion.div style={{y:projectsY}}>
         <Projects></Projects>
+      </motion.div>
+      <motion.div style={{y:contactY}}>
+        <Contact></Contact>
       </motion.div>
       <Footer></Footer>
     </main>
