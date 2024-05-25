@@ -5,38 +5,16 @@ import Projects from './Projects.jsx';
 import Footer from './Footer.jsx';
 import Contact from './Contact.jsx';
 import './App.css';
-import  './fonts/Rubik-VariableFont_wght.ttf';
-import {motion, useScroll, useTransform} from 'framer-motion';
-import React, {useRef} from 'react';
+import './fonts/Rubik-VariableFont_wght.ttf';
 function App()
 {
-  const ref=useRef(null);
-  const {scrollYProgress}=useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const introY=useTransform(scrollYProgress, [0,1], ["0%", "200%"]);
-  const aboutY=useTransform(scrollYProgress, [0,1], ["0%", "-100%"]);
-  const projectsY=useTransform(scrollYProgress, [0,1], ["0%", "-100%"]);
-  const contactY=useTransform(scrollYProgress, [0,1], ["0%", "-100%"]);
   return(<>
-    
-    <main ref={ref}>
-      <Nav></Nav>
-      <motion.div style={{y:introY}}>
-        <Introduction></Introduction>
-      </motion.div>
-      <motion.div style={{y:aboutY}}>
-        <AboutCard></AboutCard>
-      </motion.div>
-      <motion.div style={{y:projectsY}}>
-        <Projects></Projects>
-      </motion.div>
-      <motion.div style={{y:contactY}}>
-        <Contact></Contact>
-      </motion.div>
-      <Footer></Footer>
-    </main>
+    <Nav></Nav>
+    <Introduction></Introduction>
+    <AboutCard></AboutCard>
+    <Projects></Projects>
+    <Contact></Contact>
+    <Footer></Footer>
   </>)
 }
 export default App

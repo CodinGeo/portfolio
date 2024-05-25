@@ -9,7 +9,7 @@
     width:35%;
     border-radius: 60px;
     background-color: var(--background-primary-color);
-    z-index: 1;
+    z-index:3;
 }
 .navItem
 {
