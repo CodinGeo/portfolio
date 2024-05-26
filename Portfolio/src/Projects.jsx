@@ -7,9 +7,9 @@ function Projects()
     const ProjectItem = (props) => {
         return(
             <div className="projectsListItemContainer">
-                <video className="projectsListItem" style={{height: props.size==="large"?'20vw':'9.8vw'}} src={props.src} type="video/mp4" autoPlay="autoplay" muted loop/>
+                <video className="projectsListItem" style={{height: props.size==="large"?'24vw':'11.75vw'}} src={props.src} type="video/mp4" autoPlay="autoplay" muted loop/>
                 <div className="projectsListItemTitleContainer">
-                    <h3 className="projectsListItemTitle" style={{fontSize: props.size==="large"?'4.5vw':'2.2vw'}}>{props.title}</h3>
+                    <h3 className="projectsListItemTitle" style={{fontSize: props.size==="large"?'6vw':'2.9vw'}}>{props.title}</h3>
                 </div>
             </div>);
     }
@@ -31,7 +31,6 @@ function Projects()
                 </a>
             </div>
         </div>
-    </section>
-    );
+    </section>);
 }
 export default Projects;

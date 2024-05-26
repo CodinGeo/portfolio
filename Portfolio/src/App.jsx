@@ -3,18 +3,20 @@ import Introduction from './Introduction.jsx';
 import AboutCard from './AboutCard.jsx';
 import Projects from './Projects.jsx';
 import Footer from './Footer.jsx';
-import Contact from './Contact.jsx';
 import './App.css';
-import './fonts/Rubik-VariableFont_wght.ttf';
+import  './fonts/Rubik-VariableFont_wght.ttf';
 function App()
 {
-  return(<>
-    <Nav></Nav>
-    <Introduction></Introduction>
-    <AboutCard></AboutCard>
-    <Projects></Projects>
-    <Contact></Contact>
-    <Footer></Footer>
+  
+  return(
+  <>
+  <Nav></Nav>
+  <div className="content">
+    <div className="stackElement"><Introduction></Introduction></div>
+    <div className="stackElement"><AboutCard></AboutCard></div>
+    <div className="stackElement"><Projects></Projects></div>
+  </div>
+  <Footer></Footer>
   </>)
 }
 export default App

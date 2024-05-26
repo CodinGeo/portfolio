@@ -14,15 +14,15 @@ function Introduction()
         </figure>
         <div className="introRight">
             <span className="introNameAndLineContainer">
-              <h1 className="introName">Marcin<br></br>Bieliński</h1>
-              <hr className="introNameLine"></hr>
+            <h1 className="introName">Marcin<br></br>Bieliński</h1>
+            <hr className="introNameLine"></hr>
             </span>
             <section className="introSocials">
                 <div className="introSocialsLinkWrapper"><a href="https://www.linkedin.com/in/marcin-bieli%C5%84ski-9078a92a1/" target="_blank" className="introSocialsLink">LinkedIn</a></div>
                 <div className="introSocialsLinkWrapper"><hr className="introSocialsLine"></hr></div>
                 <div className="introSocialsLinkWrapper"><a href="https://www.facebook.com/marcin.bielinski.125/?locale=pl_PL" target="_blank" className="introSocialsLink">Facebook</a></div>
             </section>
-            <button className="introContactBtn">Skontaktuj się ze mną!</button>
+            <button className="introContactBtn">Skontaktuj się<br></br> ze mną!</button>
         </div>
     </section>)
 }

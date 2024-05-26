@@ -23,7 +23,7 @@
 .projectsListItemTitleContainer
 {
     top: 38.25%;
-    left: 15%;
+    left: 11%;
     margin: 0;
     z-index: 1;
     position: absolute;
@@ -40,19 +40,22 @@
 .projects
 {
     margin-bottom: 0;
-    padding-bottom: 6vw;
+    padding-top: 15vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     background-color: var(--background-primary-color);
 }
 .projectsTitle
 {
-    margin-bottom: 3vw;
+    margin-top: 3vw;
     text-align: center;
+    font-size: 3.5vw;
     color: var(--primary-color);
 }
 .projectsListContainer
 {
+    margin-top: 4vh;
     margin-bottom: 2vw;
     display: flex;
     flex: row;
