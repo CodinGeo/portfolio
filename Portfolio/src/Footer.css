@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 5vw;
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-primary-color);
 }
 .footerLogo
 {

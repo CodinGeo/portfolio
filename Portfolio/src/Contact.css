@@ -1,14 +1,103 @@
-.contactBackground
+.contactWrapper
 {
-    padding: 2vw 15vw 5vw 15vw;
+    padding-top: 5vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: var(--background-secondary-color);
+    height: 100vh;
 }
-.contactContainer
+.contactInfoTitle
 {
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+    text-align: left;
+    font-size: 4vw;
+    color: var(--primary-color);
+}
+.contactFormContainer
+{
+    width: 85%;
+}
+.contactFormInside
+{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+.contactFormGreeting
+{
+    margin-bottom: 0.8vw;
+}
+.contactFormText
+{
+    font-size: 1.8vw;
+}
+.contactFormLine
+{
+    display: flex;
+    flex-direction: center;
+}
+.contactFormInput
+{
+    display: inline-block;
+    height: 1.8vw;
+    width: 30vw;
+    margin-top: 0.1vw;
+    margin-left: 0.6vw;
+    padding-bottom: 0.5vw;
+    padding-left: 0;
+    font-size: 2vw;
+    color: white;
+    background-color: var(--background-secondarycolor);
+    border: none;
+    border-bottom: 0.2vw solid var(--secondary-color);
+}
+.contactFormInput:focus
+{
+    outline: none;
+    border-bottom: 0.2vw dotted var(--primary-color);
+}
+.contactFormMessageContainer
+{
+    margin-top: 1vw;
+}
+.contactFormMessage
+{
+    height: 13vw;
+    width: 96%;
+    margin-top: 1vh;
+    margin-left: 0;
+    padding: 1vw;
+    font-size: 1.5vw;
     background-color: var(--background-primary-color);
-    width: 60vw;
-    height: 80vh;
+    resize: none;
+    border-radius: 10px;
+}
+.contactFormButtonContainer
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.contactFormButton
+{
+    margin-top: 1.5vw;
+    padding: 0.5vw;
+    width: 13vw;
+    font-size: 2vw;
+    font-weight: bold;
+    background-color: var(--background-primary-color);
+    color: var(--primary-color);
+    border: 0.3vw solid var(--primary-color);
+    border-radius: 90px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out, border-color 0.2s ease-out;
+}
+.contactFormButton:hover
+{
+    background-color: var(--secondary-color);
+    color: white;
+    transform: scale(1.05);
+    border-color: var(--secondary-color)
 }
