@@ -9,6 +9,7 @@
     width: 100%;
     height: 85vh;
     background-color: var(--background-secondary-color);
+    scroll-snap-align: start;
 }
 .aboutCardPicWrapper
 {

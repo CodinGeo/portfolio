@@ -3,6 +3,10 @@
     font-family: 'Rubik';
     src: local("Rubik-VariableFont_wght"), url('./fonts/Rubik-VariableFont_wght.ttf') format('truetype');
 }
+html
+{
+    scroll-snap-type: y mandatory;
+}
 body
 {
     margin: 0;
@@ -20,9 +24,4 @@ body
 .content
 {
     margin-top: -6.2vh;
-}
-.stackElement
-{
-    position: sticky;
-    top: 0;
 }

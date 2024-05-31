@@ -13,10 +13,10 @@ function App()
   <>
   <Nav></Nav>
   <div className="content">
-    <div className="stackElement"><Introduction></Introduction></div>
-    <div className="stackElement"><AboutCard></AboutCard></div>
-    <div className="stackElement"><Projects></Projects></div>
-    <div className="stackElement"><Contact></Contact></div>
+    <Introduction></Introduction>
+    <AboutCard></AboutCard>
+    <Projects></Projects>
+    <Contact></Contact>
   </div>
   <Footer></Footer>
   </>)

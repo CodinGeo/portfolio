@@ -14,7 +14,7 @@ function Projects()
             </div>);
     }
     return(
-    <section className="projects">
+    <section id="projects" className="projects">
         <h2 className="projectsTitle">Moje projekty</h2>
         <div className="projectsListContainer">
             <div className="projectsListLeftColumn">

@@ -4,13 +4,13 @@ function Nav()
     return(
         <nav className="navContainer">
             <div className="navItem navItemActive">
-                <h3 className="navLink">O mnie</h3>
+                <a href="#about" className="navLink">O mnie</a>
             </div>
             <div className="navItem">
-                <h3 className="navLink">Doświadczenie</h3>
+                <a href="#projects" className="navLink">Doświadczenie</a>
             </div>
             <div className="navItem">
-                <h3 href="#" className="navLink">Kontakt</h3>
+                <a href="#contact" className="navLink">Kontakt</a>
             </div>
         </nav>
     );

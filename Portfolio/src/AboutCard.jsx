@@ -3,7 +3,7 @@ import './AboutCard.css';
 function AboutCard()
 {
     return(
-    <section className="aboutCardContainer">
+    <section id="about" className="aboutCardContainer">
         <figure className="aboutCardPicWrapper">
             <img src={marcinAbout} className="aboutCardPic"></img>
         </figure>

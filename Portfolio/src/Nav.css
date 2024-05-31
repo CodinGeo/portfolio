@@ -13,8 +13,13 @@
 }
 .navItem
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     float: left;
     width: 33.3%;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
     text-align: center;
     border-top: 2px solid var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
@@ -45,11 +50,11 @@
 }
 .navItem > .navLink
 {
-    margin-top: 1.2vh;
-    margin-bottom: 1.2vh;
-    font-size:1.3vw;
+    font-size:1.5vw;
+    font-weight: 450;
     color: var(--primary-color);
     transition: color 0.2s ease-out;
+    text-decoration: none;
 }
 .navItemActive
 {

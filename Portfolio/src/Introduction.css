@@ -6,17 +6,18 @@
     height: 85vh;
     display: flex;
     justify-content: center;
+    scroll-snap-align: start;
 }
 .introLeft
 {
-    margin-top: 2vw;
     width: 28vw;
+    margin-top: 2vw;
 }
 .introTopicSmall
 {
     margin-bottom: 0;
-    font-size: 2.5vw;
     color: var(--primary-color);
+    font-size: 2.5vw;
 }
 .introShortDescription
 {
