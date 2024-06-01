@@ -26,6 +26,7 @@
     border-right: 1px solid var(--primary-color);
     border-left: 1px solid var(--primary-color);
     transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+    cursor: pointer;
 }
 .navItem:first-child
 {

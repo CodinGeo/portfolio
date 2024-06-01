@@ -6,7 +6,6 @@
     height: 85vh;
     display: flex;
     justify-content: center;
-    scroll-snap-align: start;
 }
 .introLeft
 {
@@ -108,6 +107,7 @@
     border: 0.3vw solid var(--primary-color);
     border-radius: 90px;
     transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out, border-color 0.2s ease-out;
+    cursor: pointer;
 }
 .introContactBtn:hover
 {

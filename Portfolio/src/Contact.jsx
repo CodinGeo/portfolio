@@ -1,12 +1,13 @@
-import './Contact.css';
 import React from 'react';
-import ContactUs from './ContactForm.jsx';
-function Contact() {
-    return (
-        <section id="contact" className="contactWrapper">
+import ContactForm from './ContactForm.jsx';
+import './Contact.css';
+function Contact({contactRef})
+{
+    return(
+        <section ref={contactRef} className="contactWrapper element">
             <h3 className="contactInfoTitle">Napisz coś do mnie!</h3>
             <div className="contactFormContainer">
-                <ContactUs></ContactUs>
+                <ContactForm></ContactForm>
             </div>
         </section>
     );

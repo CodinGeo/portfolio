@@ -7,7 +7,6 @@
     align-items: center;
     background-color: var(--background-secondary-color);
     height: 100vh;
-    scroll-snap-align: start;
 }
 .contactInfoTitle
 {

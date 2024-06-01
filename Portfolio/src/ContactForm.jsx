@@ -1,22 +1,19 @@
-import React, { useRef } from 'react';
+import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
-const ContactUs = () => {
+const ContactForm = () =>{
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e) =>{
     e.preventDefault();
 
     emailjs
-      .sendForm('service_shu0hom', 'template_szgzkrj', form.current, {
-        publicKey: 'FTiHEPk47_MpccAdK',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
+      .sendForm('service_shu0hom', 'template_szgzkrj', form.current,{
+        publicKey: 'FTiHEPk47_MpccAdK',})
+      .then( () =>{
+        console.log('SUCCESS!');},
+        (error) =>{
           console.log('FAILED...', error.text);
         },
       );
@@ -35,4 +32,4 @@ const ContactUs = () => {
     </form>
   );
 };
-export default ContactUs;
+export default ContactForm;
