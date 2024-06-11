@@ -1,12 +1,13 @@
 import marcinCropped from './assets/marcinCropped.png';
 import './Introduction.css';
+
 function Introduction({contactRef})
 {
     const handleContactClick=()=>{
         contactRef.current?.scrollIntoView({behavior: "smooth"});
     }
     return(
-        <section className="introContainer element">
+        <section className="introContainer appElement">
             <div className="introLeft">
                 <h4 className="introTopicSmall">Kim jestem?</h4>
                 <h2 className="introShortDescription">Front-End Dev,<br></br>Freelancer</h2>
@@ -21,9 +22,9 @@ function Introduction({contactRef})
                 <hr className="introNameLine"></hr>
                 </span>
                 <section className="introSocials">
-                    <div className="introSocialsLinkWrapper"><a href="https://www.linkedin.com/in/marcin-bieli%C5%84ski-9078a92a1/" target="_blank" className="introSocialsLink">LinkedIn</a></div>
-                    <div className="introSocialsLinkWrapper"><hr className="introSocialsLine"></hr></div>
-                    <div className="introSocialsLinkWrapper"><a href="https://www.facebook.com/marcin.bielinski.125/?locale=pl_PL" target="_blank" className="introSocialsLink">Facebook</a></div>
+                    <div className="introSocialsLinkContainer"><a href="https://www.linkedin.com/in/marcin-bieli%C5%84ski-9078a92a1/" target="_blank" className="introSocialsLink">LinkedIn</a></div>
+                    <div className="introSocialsLinkContainer"><hr className="introSocialsLine"></hr></div>
+                    <div className="introSocialsLinkContainer"><a href="https://www.facebook.com/marcin.bielinski.125/?locale=pl_PL" target="_blank" className="introSocialsLink">Facebook</a></div>
                 </section>
                 <button className="introContactBtn" onClick={handleContactClick}>Skontaktuj się<br></br> ze mną!</button>
             </div>

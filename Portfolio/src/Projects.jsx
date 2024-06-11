@@ -2,6 +2,7 @@ import loPage from './assets/17loPagev2.mp4';
 import spPage from './assets/sp37Pagev2.mp4';
 import zsoPage from './assets/zso8Pagev2.mp4';
 import './Projects.css';
+
 function Projects({projectsRef})
 {
     const ProjectItem = (props) =>{
@@ -15,7 +16,7 @@ function Projects({projectsRef})
         );
     }
     return(
-        <section ref={projectsRef} className="projects element">
+        <section ref={projectsRef} className="projects appElement">
             <h2 className="projectsTitle">Moje projekty</h2>
             <div className="projectsListContainer">
                 <div className="projectsListLeftColumn">

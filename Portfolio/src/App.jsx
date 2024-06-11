@@ -7,6 +7,7 @@ import Contact from './Contact.jsx';
 import Footer from './Footer.jsx';
 import  './fonts/Rubik-VariableFont_wght.ttf';
 import './App.css';
+
 function App()
 {
   const aboutRef=useRef(null);

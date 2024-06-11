@@ -1,11 +1,30 @@
 import './Footer.css';
-
+import linkedInLogo from './assets/linkedInLogo.svg';
+import facebookLogo from './assets/facebookLogo.svg';
+import instagramLogo from './assets/instagramLogo.svg';
 function Footer()
 {
+    const FooterSocial = (props) =>{
+        return(
+            <a href={props.link} target="_blank" className="footerSocialIconLink">
+                <div className="footerSocialContainer" style={{border: '0.15vw solid' + props.color}}>
+                    <img className="footerSocialIcon" style={{filter: props.filter, height: props.height}} src={props.icon}/>
+                    <div className="footerSocialBg" style={{backgroundColor: props.color}}>
+                        <img className="footerSocialIcon" style={{filter: 'invert(94%) sepia(100%) saturate(0%) hue-rotate(122deg) brightness(102%) contrast(103%)', height: props.height}} src={props.icon}/>
+                    </div>
+                </div>
+            </a>
+        );
+    }
     return(
-        <footer className="footerContainer element">
+        <footer className="footerContainer appElement">
             <figure><img className="footerLogo"src='/portfolioLogo.png'></img></figure>
-            <p className="footerText">Marcin Bieliński, wszelkie prawa zastrzeżone &copy;</p>
+            <p className="footerText">&copy; 2024 Marcin Bieliński, Wszelkie Prawa Zastrzeżone </p>
+            <section className="footerSocials">
+                <FooterSocial icon={linkedInLogo} link="https://www.linkedin.com/in/marcin-bieli%C5%84ski-9078a92a1/" height='0.95vw' color="#0e76a8" filter="invert(26%) sepia(93%) saturate(1626%) hue-rotate(177deg) brightness(95%) contrast(89%)"></FooterSocial>
+                <FooterSocial icon={instagramLogo} link="https://www.instagram.com/marcin.bieli/" height='1.3vw' color="#c0007a" filter="invert(19%) sepia(76%) saturate(5728%) hue-rotate(310deg) brightness(74%) contrast(111%)"></FooterSocial>
+                <FooterSocial icon={facebookLogo} link="https://www.facebook.com/marcin.bielinski.125/" height='1.1vw' color="#4267B2" filter="invert(36%) sepia(76%) saturate(414%) hue-rotate(180deg) brightness(95%) contrast(96%)"></FooterSocial>
+            </section>
         </footer>
     );
 }

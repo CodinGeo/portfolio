@@ -1,4 +1,5 @@
 import './Nav.css';
+
 function Nav({aboutRef, projectsRef, contactRef})
 {
     const handleAboutClick=() =>{

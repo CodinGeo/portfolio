@@ -3,8 +3,8 @@ import './AboutCard.css';
 
 function AboutCard({aboutRef}) {
     return(
-        <section id="about" className="aboutCardContainer element" ref={aboutRef}>
-            <figure className="aboutCardPicWrapper">
+        <section id="about" className="aboutCardContainer appElement" ref={aboutRef}>
+            <figure className="aboutCardPicContainer">
                 <img src={marcinAbout} className="aboutCardPic" alt="Marcin About" />
             </figure>
             <div className="aboutCardTexts">
