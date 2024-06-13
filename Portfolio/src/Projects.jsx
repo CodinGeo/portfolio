@@ -2,10 +2,11 @@ import loPage from './assets/17loPagev2.mp4';
 import spPage from './assets/sp37Pagev2.mp4';
 import zsoPage from './assets/zso8Pagev2.mp4';
 import './Projects.css';
+import {memo} from 'react';
 
 function Projects({projectsRef})
 {
-    const ProjectItem = (props) =>{
+    const ProjectItem = (props) => {
         return(
             <div className="projectsListItemContainer">
                 <video className="projectsListItem" style={{height: props.size==="large"?'24vw':'11.75vw'}} src={props.src} type="video/mp4" autoPlay="autoplay" muted loop/>
@@ -36,4 +37,5 @@ function Projects({projectsRef})
         </section>
     );
 }
+Projects=memo(Projects);
 export default Projects;

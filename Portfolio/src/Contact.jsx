@@ -5,9 +5,9 @@ import './Contact.css';
 function Contact({contactRef})
 {
     return(
-        <section ref={contactRef} className="contactContainer appElement">
-            <h3 className="contactInfoTitle">Napisz coś do mnie!</h3>
-            <div className="contactFormContainer">
+        <section ref={contactRef} className='contactContainer'>
+            <h3 className='contactInfoTitle'>Napisz coś do mnie!</h3>
+            <div className='contactFormContainer'>
                 <ContactForm></ContactForm>
             </div>
         </section>

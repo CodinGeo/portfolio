@@ -1,7 +1,7 @@
 @font-face
 {
     font-family: 'Rubik';
-    src: local("Rubik-VariableFont_wght"), url('./fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+    src: local('Rubik-VariableFont_wght'), url('./fonts/Rubik-VariableFont_wght.ttf') format('truetype');
 }
 body
 {

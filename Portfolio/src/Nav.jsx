@@ -1,26 +1,40 @@
+import {useEffect} from 'react';
 import './Nav.css';
 
-function Nav({aboutRef, projectsRef, contactRef})
-{
-    const handleAboutClick=() =>{
+function Nav({aboutRef, projectsRef, contactRef, currentSection}) {
+    const handleAboutClick = () => {
         aboutRef.current?.scrollIntoView({behavior: "smooth"});
-    }
-    const handleProjectsClick=() =>{
+    };
+    const handleProjectsClick = () => {
         projectsRef.current?.scrollIntoView({behavior: "smooth"});
-    }
-    const handleContactClick=() =>{
+    };
+    const handleContactClick = () => {
         contactRef.current?.scrollIntoView({behavior: "smooth"});
-    }
-    return(
-        <nav className="navContainer">
-            <div className="navItem navItemActive" onClick={handleAboutClick}>
-                <a className="navLink">O mnie</a>
+    };
+
+    useEffect(() => {
+        const updateNavClasses = () => {
+            const navItems = document.querySelectorAll('.navItem');
+            navItems.forEach(item => {
+                item.classList.remove('navItemActive');
+                if (item.dataset.section === currentSection) {
+                    item.classList.add('navItemActive');
+                }
+            });
+        };
+        updateNavClasses();
+    }, [currentSection]);
+
+    return (
+        <nav className={'navContainer'}>
+            <div className={'navItem'} data-section='about' onClick={handleAboutClick}>
+                <a className='navLink' linktosection='about'>O mnie</a>
             </div>
-            <div className="navItem"  onClick={handleProjectsClick}>
-                <a className="navLink">Doświadczenie</a>
+            <div className={'navItem'} data-section='projects' onClick={handleProjectsClick}>
+                <a className='navLink' linktosection='projects'>Projekty</a>
             </div>
-            <div className="navItem"  onClick={handleContactClick}>
-                <a className="navLink">Kontakt</a>
+            <div className={'navItem'} data-section='contact' onClick={handleContactClick}>
+                <a className='navLink' linktosection='contact'>Kontakt</a>
             </div>
         </nav>
     );
