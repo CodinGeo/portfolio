@@ -3,6 +3,16 @@
     font-family: 'Rubik';
     src: local('Rubik-VariableFont_wght'), url('./fonts/Rubik-VariableFont_wght.ttf') format('truetype');
 }
+html
+{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+}
+html::-webkit-scrollbar
+{
+    display: none;
+}
 body
 {
     --primary-color: #7EF9C2;
@@ -19,4 +29,44 @@ body
 .content
 {
     margin-top: -6.2vh;
+}
+.scrollSnapItem
+{
+    scroll-snap-align: start;
+}
+.hiddenLeft, .hiddenCenter, .hiddenRight, .hiddenBottom
+{
+    opacity: 0;
+    filter: blur(1px);
+    transition: none;
+}
+@media(prefers-reduced-motion: reduce)
+{
+    .hiddenLeft, .hiddenCenter, .hiddenRight, .hiddenBottom
+    {
+        transition: none;
+    }
+}
+.hiddenLeft
+{
+    transform: translateX(-20%);
+}
+.hiddenRight
+{
+    transform: translateX(20%);
+}
+.hiddenBottom
+{
+    transform: translateY(10%);
+}
+.visible
+{
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: all 1.5s;
+}
+.aboutCardTexts .hiddenCenter:nth-child(2)
+{
+    transition-delay: 0.75s;
 }

@@ -5,8 +5,8 @@ import './Contact.css';
 function Contact({contactRef})
 {
     return(
-        <section ref={contactRef} className='contactContainer'>
-            <h3 className='contactInfoTitle'>Napisz coś do mnie!</h3>
+        <section ref={contactRef} className='scrollSnapItem contactContainer'>
+            <h3 className='contactInfoTitle'>Napisz do mnie!</h3>
             <div className='contactFormContainer'>
                 <ContactForm></ContactForm>
             </div>

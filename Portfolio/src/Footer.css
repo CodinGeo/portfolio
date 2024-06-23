@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 5vw;
+    height: 10vh;
     background-color: var(--background-primary-color);
 }
 .footerLogo
@@ -16,7 +16,8 @@
     
     margin: 0;
     padding: 0;
-    height: 3vw;
+    height: 4vw;
+    cursor: pointer;
 }
 .footerText
 {

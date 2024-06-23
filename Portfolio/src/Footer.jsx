@@ -4,8 +4,11 @@ import facebookLogo from './assets/facebookLogo.svg';
 import instagramLogo from './assets/instagramLogo.svg';
 import gitHubLogo from './assets/gitHubLogo.svg';
 
-function Footer()
+function Footer({introRef, footerRef})
 {
+    const handleIntroClick = () => {
+        introRef.current?.scrollIntoView({behavior: "smooth"});
+    };
     const FooterSocial = (props) => {
         return(
             <a href={props.link} target='_blank' className='footerSocialIconLink'>
@@ -19,8 +22,8 @@ function Footer()
         );
     }
     return(
-        <footer className='footerContainer'>
-            <figure><img className='footerLogo'src='/portfolioLogo.png'></img></figure>
+        <footer className='scrollSnapItem footerContainer' ref={footerRef}>
+            <figure><img className='footerLogo'src='/portfolioLogo.png' onClick={handleIntroClick}></img></figure>
             <p className='footerText'>&copy; 2024 Marcin Bieliński, Wszelkie Prawa Zastrzeżone </p>
             <section className='footerSocials'>
                 <FooterSocial icon={linkedInLogo} link='https://www.linkedin.com/in/marcin-bieli%C5%84ski-9078a92a1/' height='0.95vw' color='#0e76a8' filter='invert(26%) sepia(93%) saturate(1626%) hue-rotate(177deg) brightness(95%) contrast(89%)'></FooterSocial>

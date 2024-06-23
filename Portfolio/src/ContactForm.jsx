@@ -20,7 +20,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className='contactForm'>
+    <form ref={form} onSubmit={sendEmail} className='contactForm hiddenBottom'>
         <div className='contactFormInside'>
             <div className='contactFormGreeting'>Cześć!</div> 
             <div className='contactFormLine'>Nazywam się<input type='text' name='name' placeholder='Twoje imię i nazwisko' className='contactFormInput' required/>Mój mail to<input type='email' name='mail' placeholder='Twój mail' className='contactFormMailInput contactFormInput' required/></div>
