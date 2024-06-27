@@ -64,38 +64,6 @@
     transform: scale(2,1);
     border: 0.25vw solid var(--secondary-color);
 }
-.introSocials
-{
-    margin-top: 0.9vw;
-    display: flex;
-    justify-content: flex-start;
-    gap: 1vw;
-    width: max-content;
-    height: 20px;
-}
-.introSocialsLinkContainer
-{
-    float: left;
-    display: flex;
-    align-items: center;
-}
-.introSocialsLink
-{
-    font-size: 1.5vw;
-    text-decoration: none;
-    color: white;
-    transition: color 0.2s ease-out, font-size 0.2s ease-out;
-}
-.introSocialsLink:hover
-{
-    color: var(--secondary-color);
-    font-size: 1.6vw;
-}
-.introSocialsLine
-{   
-    border: 0.08vw solid var(--primary-color);
-    height: 1vw;
-}
 .introContactBtn
 {
     margin-top: 3.5vw;
@@ -103,12 +71,12 @@
     width: 18vw;
     font-size: 2vw;
     font-weight: bold;
-    background-color: var(--background-primary-color);
     color: var(--primary-color);
     border: 0.3vw solid var(--primary-color);
     border-radius: 90px;
     transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out, border-color 0.2s ease-out;
     cursor: pointer;
+    background-color: var(--background-color);
 }
 .introContactBtn:hover
 {

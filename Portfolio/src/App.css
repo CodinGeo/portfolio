@@ -17,24 +17,31 @@ body
 {
     --primary-color: #7EF9C2;
     --secondary-color: #4EC992;
-    --background-primary-color: #041F1E;
-    --background-secondary-color: #19282A;
-    background-color: var(--background-primary-color);
+    --background-color: #19282A;
+    background-color: var(--background-color);
     font-family: 'Rubik', 'Arial', sans-serif;
     color: white;
     margin: 0;
     width: 100%;
     height: 100%;
 }
+input
+{
+    font-family: 'Rubik', 'Arial', sans-serif;
+}
+button
+{
+    font-family: 'Rubik', 'Arial', sans-serif;
+}
 .content
 {
-    margin-top: -6.2vh;
+    z-index: 5;
 }
 .scrollSnapItem
 {
     scroll-snap-align: start;
 }
-.hiddenLeft, .hiddenCenter, .hiddenRight, .hiddenBottom
+.hiddenLeft, .hiddenCenter, .hiddenRight
 {
     opacity: 0;
     filter: blur(1px);
@@ -42,7 +49,7 @@ body
 }
 @media(prefers-reduced-motion: reduce)
 {
-    .hiddenLeft, .hiddenCenter, .hiddenRight, .hiddenBottom
+    .hiddenLeft, .hiddenCenter, .hiddenRight
     {
         transition: none;
     }
@@ -54,10 +61,6 @@ body
 .hiddenRight
 {
     transform: translateX(20%);
-}
-.hiddenBottom
-{
-    transform: translateY(10%);
 }
 .visible
 {

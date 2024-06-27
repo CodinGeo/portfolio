@@ -28,13 +28,13 @@ function Nav({aboutRef, projectsRef, contactRef, currentSection}) {
     return (
         <nav className={'navContainer'}>
             <div className={'navItem'} data-section='about' onClick={handleAboutClick}>
-                <a className='navLink' linktosection='about'>O mnie</a>
+                <a className='navLink'>O mnie</a>
             </div>
             <div className={'navItem'} data-section='projects' onClick={handleProjectsClick}>
-                <a className='navLink' linktosection='projects'>Projekty</a>
+                <a className='navLink'>Projekty</a>
             </div>
             <div className={'navItem'} data-section='contact' onClick={handleContactClick}>
-                <a className='navLink' linktosection='contact'>Kontakt</a>
+                <a className='navLink'>Kontakt</a>
             </div>
         </nav>
     );

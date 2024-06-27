@@ -7,7 +7,7 @@
 }
 .contactFormGreeting
 {
-    margin-bottom: 0.8vw;
+    margin-bottom: 0.75vw;
 }
 .contactFormText
 {
@@ -15,45 +15,49 @@
 }
 .contactFormLine
 {
+    margin-top: 0.5vw;
+    width: 100%;
     display: flex;
-    flex-direction: center;
+    flex-direction: row;
+}
+.contactFormInputPrefix
+{
+    min-width: fit-content;
 }
 .contactFormInput
 {
-    margin-right: 1vw;
+    margin-left: 0.5vw;
     display: inline-block;
+    width: 100%;
     height: 1.8vw;
-    width: 30vw;
     margin-top: 0.1vw;
-    margin-left: 0.6vw;
-    padding-bottom: 0.5vw;
     padding-left: 0;
-    font-size: 2vw;
-    color: white;
-    background-color: var(--background-secondarycolor);
+    font-size: 1.8vw;
+    color: var(--secondary-color);
     border: none;
-    border-bottom: 0.2vw solid var(--secondary-color);
+    border-bottom: 0.1vw solid var(--primary-color);
+    background-color: var(--background-color);
 }
 .contactFormInput:focus
 {
     outline: none;
-    border-bottom: 0.2vw dotted var(--primary-color);
+    border-bottom: 0.1vw dotted var(--primary-color);
 }
 .contactFormMessageContainer
 {
-    margin-top: 1vw;
+    margin-top: 1.5vw;
 }
 .contactFormMessage
 {
     height: 13vw;
-    width: 96%;
+    width: 100%;
     margin-top: 1vh;
     margin-left: 0;
-    padding: 1vw;
+    padding: 0.3vw;
     font-size: 1.5vw;
-    background-color: var(--background-primary-color);
     resize: none;
-    border-radius: 10px;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
 }
 .contactFormButtonContainer
 {
@@ -68,11 +72,11 @@
     width: 13vw;
     font-size: 2vw;
     font-weight: bold;
-    background-color: var(--background-primary-color);
     color: var(--primary-color);
-    border: 0.3vw solid var(--primary-color);
+    border: 0.2vw solid var(--primary-color);
     border-radius: 90px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out, border-color 0.2s ease-out;
+    background-color: var(--background-color);
+    transition: all 0.2s ease-out;
 }
 .contactFormButton:hover
 {

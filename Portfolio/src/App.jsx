@@ -1,10 +1,10 @@
 import {useRef, useState, useEffect} from 'react';
 import Nav from './Nav.jsx';
+import Sides from './Sides.jsx';
 import Introduction from './Introduction.jsx';
 import AboutCard from './AboutCard.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
-import Footer from './Footer.jsx';
 import  './fonts/Rubik-VariableFont_wght.ttf';
 import './App.css';
 
@@ -14,15 +14,13 @@ function App()
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  const footerRef = useRef(null);
 
   const [currentSection, setCurrentSection] = useState('about');
   const sections = [
-    {ref: introRef, sectionName: 'introduction'},
+    {ref: introRef, sectionName: 'intro'},
     {ref: aboutRef, sectionName: 'about'},
     {ref: projectsRef, sectionName: 'projects'},
-    {ref: contactRef, sectionName: 'contact'},
-    {ref: footerRef, sectionName: 'footer'},
+    {ref: contactRef, sectionName: 'contact'}
   ];
   useEffect(() => {
     const handleScroll = () => {
@@ -48,21 +46,24 @@ function App()
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
+      else {
+        entry.target.classList.remove('visible');
+      }
     });
   });
-  const hiddenElements = document.querySelectorAll('.hiddenLeft, .hiddenCenter, .hiddenRight, .hiddenBottom');
+  const hiddenElements = document.querySelectorAll('.hiddenLeft, .hiddenCenter, .hiddenRight');
   hiddenElements.forEach((element) => {
     observer.observe(element);
   });
   return(
     <>
-      <Nav aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} currentSection={currentSection==='introduction'?'about':currentSection==='footer'?'contact':currentSection}></Nav>
+      <Nav aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} currentSection={currentSection==='intro'?'about':currentSection}></Nav>
+      <Sides introRef={introRef} aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} currentSection={currentSection}></Sides>
       <div className='content'>
         <Introduction introRef={introRef} contactRef={contactRef}></Introduction>
         <AboutCard aboutRef={aboutRef} sectionName='about'></AboutCard>
         <Projects projectsRef={projectsRef} sectionName='projects'></Projects>
         <Contact contactRef={contactRef} sectionName='contact'></Contact>
-        <Footer introRef={introRef} footerRef={footerRef}></Footer>
       </div>
     </>
   );

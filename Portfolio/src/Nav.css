@@ -8,7 +8,6 @@
     position: sticky;
     z-index: 3;
     width: 35%;
-    background-color: var(--background-primary-color);
     border-radius: 60px;
 }
 .navItem

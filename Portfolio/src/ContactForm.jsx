@@ -20,12 +20,15 @@ const ContactForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className='contactForm hiddenBottom'>
+    <form ref={form} onSubmit={sendEmail} className='contactForm hiddenLeft'>
         <div className='contactFormInside'>
             <div className='contactFormGreeting'>Cześć!</div> 
-            <div className='contactFormLine'>Nazywam się<input type='text' name='name' placeholder='Twoje imię i nazwisko' className='contactFormInput' required/>Mój mail to<input type='email' name='mail' placeholder='Twój mail' className='contactFormMailInput contactFormInput' required/></div>
+            <div className='contactFormDetails'>
+              <div className='contactFormLine'><div className='contactFormInputPrefix'>Nazywam się</div><input type='text' name='name' className='contactFormInput' required/></div>
+              <div className='contactFormLine'><div className='contactFormInputPrefix'>Mój mail to</div><input type='email' name='mail' className='contactFormInput' required/></div>
+            </div>
             <div className='contactFormMessageContainer'>Mam do Ciebie wiadomość:<br></br>
-                <textarea name='message' placeholder='Twoja wiadomość' className='contactFormMessage contactFormInput' required></textarea>
+                <textarea name='message' className='contactFormMessage contactFormInput' required></textarea>
             </div>
             <div className='contactFormButtonContainer'><input type='submit' className='contactFormButton' value='Wyślij'/></div>
         </div>
