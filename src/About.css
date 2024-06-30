@@ -1,0 +1,36 @@
+.aboutContainer
+{
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.aboutPicContainer
+{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.aboutPic
+{
+    width: 40vw;
+    border-radius: 10%;
+}
+.aboutTexts
+{
+    width: max-content;
+}
+.aboutTitle
+{
+    margin-bottom: 0;
+    color: var(--primary-color);
+    font-size: 4vw;
+}
+.aboutDesc
+{
+    max-width: 40vw;
+    font-size: 1.75vw;
+}

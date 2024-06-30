@@ -1,0 +1,79 @@
+@font-face
+{
+    font-family: 'Rubik';
+    src: local('Rubik-VariableFont_wght'), url('./fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+html
+{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+}
+html::-webkit-scrollbar
+{
+    display: none;
+}
+body
+{
+    --primary-color: #7EF9C2;
+    --secondary-color: #4EC992;
+    --background-color: #19282A;
+    background-color: var(--background-color);
+    font-family: 'Rubik', 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+input
+{
+    font-family: 'Rubik', 'Arial', sans-serif;
+}
+button
+{
+    font-family: 'Rubik', 'Arial', sans-serif;
+}
+.content
+{
+    z-index: 5;
+}
+.scrollSnapItem
+{
+    scroll-snap-align: start;
+}
+.hiddenLeft, .hiddenCenter, .hiddenRight
+{
+    opacity: 0;
+    filter: blur(1px);
+    transition: none;
+}
+@media(prefers-reduced-motion: reduce)
+{
+    .hiddenLeft, .hiddenCenter, .hiddenRight
+    {
+        transition: none;
+    }
+}
+.hiddenLeft
+{
+    transform: translateX(-20%);
+}
+.hiddenRight
+{
+    transform: translateX(20%);
+}
+.visible
+{
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: all 1.5s;
+}
+.aboutTexts .hiddenCenter:nth-child(2)
+{
+    transition-delay: 0.75s;
+}
+.contactFormMessageContainer
+{
+    transition-delay: 0.25s;
+}

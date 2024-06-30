@@ -1,0 +1,88 @@
+.introContainer
+{
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introLeft
+{
+    width: 28vw;
+    margin-top: 2vw;
+}
+.introTopicSmall
+{
+    margin-bottom: 0;
+    color: var(--primary-color);
+    font-size: 2.5vw;
+}
+.introShortDescription
+{
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 3.5vw;
+}
+.introLongDescription
+{
+    margin-top: 5px;
+    font-size: 1.6vw;
+    line-height: 2.3vw;
+}
+.introPic
+{
+    height: 32vw;
+    border-radius: 20%;
+}
+.introRight
+{
+    margin-left: 1.4vw;
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 20vw;
+}
+.introName
+{
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 5vw;
+}
+.introNameLine
+{
+    margin-top: -0.3vw;
+    margin-left: 2px;
+    transform-origin: center left;
+    width: 10vw;
+    border: 0.25vw solid var(--primary-color);
+    transition: transform 0.3s ease-out, border 0.3s ease-out;
+
+}
+.introNameAndLineContainer:hover .introNameLine
+{
+    transform: scale(2,1);
+    border: 0.25vw solid var(--secondary-color);
+}
+.introContactBtn
+{
+    margin-top: 3.5vw;
+    padding: 0.5vw;
+    width: 18vw;
+    font-size: 2vw;
+    font-weight: bold;
+    color: var(--primary-color);
+    border: 0.3vw solid var(--primary-color);
+    border-radius: 90px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out, border-color 0.2s ease-out;
+    cursor: pointer;
+    background-color: var(--background-color);
+}
+.introContactBtn:hover
+{
+    background-color: var(--secondary-color);
+    color: white;
+    transform: scale(1.05);
+    border-color: var(--secondary-color)
+}
