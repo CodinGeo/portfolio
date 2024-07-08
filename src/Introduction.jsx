@@ -15,7 +15,7 @@ function Introduction({introRef, contactRef})
                 <p className='introLongDescription'>Młody, szukający nowych wyzwań. Jestem doświadczony w HTML, CSS, Wordpress. Obecnie uczę się React'a.</p>
             </div>
             <figure className='hiddenCenter'>
-                <img src={marcinCropped} className='introPic'></img>
+                <img src={marcinCropped} className='introPic' alt='Zdjecie profilowe'></img>
             </figure>
             <div className='introRight hiddenRight'>
                 <span className='introNameAndLineContainer'>

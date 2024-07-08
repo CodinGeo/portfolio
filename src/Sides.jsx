@@ -1,5 +1,8 @@
 import linkedInLogo from './assets/linkedInLogo.svg';
 import gitHubLogo from './assets/gitHubLogo.svg';
+import cvLogo from './assets/cvLogo.webp';
+import cvPDF from './assets/CV.pdf';
+import phoneLogo from './assets/phoneLogo.svg';
 import {useEffect} from 'react';
 import './Sides.css';
 function Sides({introRef, aboutRef, projectsRef, contactRef, currentSection}) {
@@ -29,11 +32,11 @@ function Sides({introRef, aboutRef, projectsRef, contactRef, currentSection}) {
     }, [currentSection]);
     const SideSocial = (props) => {
         return(
-            <a href={props.link} target='_blank' className='sideSocialIconLink'>
+            <a href={props.link} target='_blank' className='sideSocialIconLink' aria-label={props.icon===linkedInLogo?'Profil LinkedIn':'Profil GitHub'}>
                 <div className='sideSocialContainer' style={{border: '0.15vw solid' + props.color}}>
-                    <img className='sideSocialIcon' style={{filter: props.filter, height: props.height}} src={props.icon}/>
+                    <img className='sideSocialIcon' style={{filter: props.filter, height: props.height}} src={props.icon} alt={props.icon===linkedInLogo?'Logo LinkedIn':'Logo GitHub'}/>
                     <div className='sideSocialBg' style={{backgroundColor: props.color}}>
-                        <img className='sideSocialIcon' style={{filter: 'invert(94%) sepia(100%) saturate(0%) hue-rotate(122deg) brightness(102%) contrast(103%)', height: props.height}} src={props.icon}/>
+                        <img className='sideSocialIcon' style={{filter: 'invert(94%) sepia(100%) saturate(0%) hue-rotate(122deg) brightness(102%) contrast(103%)', height: props.height}} src={props.icon} alt={props.icon===linkedInLogo?'Logo LinkedIn':'Logo GitHub'}/>
                     </div>
                 </div>
             </a>
@@ -42,8 +45,11 @@ function Sides({introRef, aboutRef, projectsRef, contactRef, currentSection}) {
     return(
         <>
             <section className='sideSocials'>
-                <SideSocial icon={linkedInLogo} link='https://www.linkedin.com/in/marcin-bieli%C5%84ski-9078a92a1/' height='1.25vw' color='#0e76a8' filter='invert(26%) sepia(93%) saturate(1626%) hue-rotate(177deg) brightness(95%) contrast(89%)'></SideSocial>
                 <SideSocial icon={gitHubLogo} link='https://github.com/CodinGeo' height='2.5vw' color='#555555' filter='invert(94%) sepia(100%) saturate(0%) hue-rotate(122deg) brightness(102%) contrast(103%)'></SideSocial>
+                <SideSocial icon={cvLogo} link={cvPDF} height='2.5vw' color='#7EF9C2' filter='invert(90%) sepia(6%) saturate(2548%) hue-rotate(90deg) brightness(96%) contrast(104%)'></SideSocial>
+                <SideSocial icon={linkedInLogo} link='https://www.linkedin.com/in/marcin-bieli%C5%84ski-9078a92a1/' height='1.25vw' color='#0e76a8' filter='invert(26%) sepia(93%) saturate(1626%) hue-rotate(177deg) brightness(95%) contrast(89%)'></SideSocial>
+                <SideSocial icon={phoneLogo} link='tel:+48503409129' height='1.7vw' color='#C36BDC' filter='invert(54%) sepia(67%) saturate(1661%) hue-rotate(236deg) brightness(90%) contrast(90%)'></SideSocial>
+                {/*svgrepo.com, changed color, licence: https://www.svgrepo.com/page/licensing/#CC%20Attribution*/}
             </section>
             <section className='sideNav'>
                 <div className='sideNavDot sideNavDotActive' data-section='intro' onClick={handleIntroClick}></div>

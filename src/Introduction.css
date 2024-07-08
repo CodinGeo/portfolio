@@ -84,5 +84,5 @@
     background-color: var(--secondary-color);
     color: white;
     transform: scale(1.05);
-    border-color: var(--secondary-color)
+    border-color: var(--secondary-color);
 }

@@ -5,7 +5,7 @@ function About({aboutRef}) {
     return(
         <section id='about' className='scrollSnapItem aboutContainer' ref={aboutRef}>
             <figure className='aboutPicContainer hiddenLeft'>
-                <img src={marcinAbout} className='aboutPic' alt='Marcin About'/>
+                <img src={marcinAbout} className='aboutPic' alt='Zdjęcie profilowe'/>
             </figure>
             <div className='aboutTexts'>
                 <h2 className='aboutTitle hiddenCenter'>O mnie słów kilka</h2>
