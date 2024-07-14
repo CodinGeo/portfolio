@@ -1,49 +1,44 @@
 .navContainer
 {
-    margin-left: auto;
-    margin-right: auto;
-    top: 3vh;
     display: flex;
     justify-content: space-evenly;
     position: sticky;
+    top: 3vh;
     z-index: 3;
     width: 35%;
-    border-radius: 60px;
-    background-color: var(--background-color);
+    margin: auto;
+    border-radius: 60%;
 }
 .navItem
 {
     display: flex;
     align-items: center;
     justify-content: center;
-    float: left;
     width: 33.3%;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
+    padding: 0.5vw 0 0.5vw 0;
+    border-color: var(--primary-color);
+    border-style: solid;
+    border-width: 0.2vw 0.1vw 0.2vw 0.1vw;
+    background-color: var(--background-color);
     text-align: center;
-    border-top: 0.2vw solid var(--primary-color);
-    border-bottom: 0.2vw solid var(--primary-color);
-    border-right: 0.1vw solid var(--primary-color);
-    border-left: 0.1vw solid var(--primary-color);
-    transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    float: left;
     cursor: pointer;
 }
 .navItem:first-child
 {
-    border-left: 0.2vw solid var(--primary-color);
-    border-right: 0.1vw solid var(--primary-color);
+    border-width: 0.2vw 0.1vw 0.2vw 0.2vw;
     border-radius: 60px 0 0 60px;
 }
 .navItem:last-child
 {
-    border-left: 0.1vw solid var(--primary-color);
-    border-right: 0.2vw solid var(--primary-color);
+    border-width: 0.2vw 0.2vw 0.2vw 0.1vw;
     border-radius: 0 60px 60px 0;
 }
 .navItem:hover
 {
-    background-color: var(--secondary-color);
     border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
 }
 .navItem:hover .navLink
 {
@@ -51,11 +46,11 @@
 }
 .navItem > .navLink
 {
-    font-size:1.5vw;
+    font-size: calc(10px + 1vw);
     font-weight: 450;
-    color: var(--primary-color);
-    transition: color 0.2s ease-out;
     text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.2s ease-out;
 }
 .navItemActive
 {
@@ -64,4 +59,31 @@
 .navItemActive > .navLink
 {
     color: black;
+}
+
+/*//////////////////// Mobilka ////////////////////*/
+@media only screen and (max-width: 750px)
+{
+    .navContainer
+    {
+        width: 70vw;
+    }
+    .navItem
+    {
+        height: 100%;
+        padding: 1.25vw;
+        border-width: 0.25vw 0.125vw 0.25vw 0.125vw;
+    }
+    .navItem:first-child
+    {
+        border-width: 0.25vw 0.125vw 0.25vw 0.25vw;
+    }
+    .navItem:last-child
+    {
+        border-width: 0.25vw 0.25vw 0.25vw 0.125vw;
+    }
+    .navItem > .navLink
+    {
+        font-size: calc(10px + 2vw);
+    }
 }

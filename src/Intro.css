@@ -1,0 +1,134 @@
+.introContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 auto 0 auto;
+}
+.introLeft
+{
+    width: 28vw;
+    margin: 2vw 0 0 0;
+}
+.introTopicSmall
+{
+    margin: 0 0 0.3vw 0;
+    font-size: 2.5vw;
+    color: var(--primary-color);
+}
+.introShortDesc
+{
+    margin: 0 auto 0.3vw auto;
+    font-size: 3.5vw;
+}
+.introLongDesc
+{
+    margin: 0;
+    font-size: 1.6vw;
+    line-height: 2.3vw;
+}
+.introPic
+{
+    width: 25vw;
+    border-radius: 20%;
+}
+.introRight
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 20vw;
+    margin: 4vw 0 0 1.4vw;
+}
+.introName
+{
+    margin: 0 0 -0.3vw 0;
+    font-size: 5vw;
+}
+.introNameLine
+{
+    width: 10vw;
+    margin: 0 0 0 0.3vw;
+    border: 0.25vw solid var(--primary-color);
+    transform-origin: center left;
+    transition: all 0.3s ease-out;
+}
+.introNameContainer
+{
+    margin: 0 0 3.5vw 0;
+}
+.introNameContainer:hover .introNameLine
+{
+    border: 0.25vw solid var(--secondary-color);
+    transform: scale(2,1);
+}
+.introContactBtn
+{
+    width: 18vw;
+    padding: 0.5vw;
+    border: 0.3vw solid var(--primary-color);
+    border-radius: 90px;
+    background-color: var(--background-color);
+    font-size: 2vw;
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+.introContactBtn:hover
+{
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/*//////////////////// Mobilka ////////////////////*/
+@media only screen and (max-width: 750px)
+{
+    .introContainer
+    {
+        flex-direction: column;
+        width: 73vw;
+    }
+    .introMobileMain
+    {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 4vw 0;
+    }
+    .introPic
+    {
+        width: 50vw;
+        transform: scaleX(-1);
+    }
+    .introMobileMainTexts
+    {
+        margin: 0 5vw 0 -10vw;
+    }
+    .introName
+    {
+        margin: 5vw 0 0 0;
+        font-size: 9vw;
+    }
+    .introNameLine
+    {
+        width: 15.5vw;
+        margin: 0 0 2vw 0.5vw;
+        border: 0.5vw solid var(--primary-color);
+    }
+    .introShortDesc
+    {
+        font-size: 5vw;
+        text-align: right;
+        color: var(--primary-color);
+    }
+    .introLongDesc
+    {
+        width: 85vw;
+        font-size: 5vw;
+        text-align: center;
+        line-height: 6vw;
+    }
+}

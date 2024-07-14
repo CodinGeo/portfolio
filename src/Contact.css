@@ -2,20 +2,33 @@
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     justify-content: center;
     height: 100vh;
 }
 .contactInfoTitle
 {
-    margin-top: 4vw;
-    margin-bottom: 2vw;
-    text-align: left;
+    margin: 4vw 0 2vw 0;
     font-size: 4vw;
+    text-align: left;
     color: var(--primary-color);
 }
 .contactFormContainer
 {
     width: 70%;
+}
+
+/*//////////////////// Mobilka ////////////////////*/
+@media only screen and (max-width: 750px)
+{
+    .contactInfoTitle
+    {
+        margin: 0 0 8vw 0;
+        font-size: 8vw;
+    }
+    .contactFormContainer
+    {
+        width: 80%;
+    }
 }

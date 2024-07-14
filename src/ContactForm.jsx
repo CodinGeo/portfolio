@@ -22,15 +22,30 @@ const ContactForm = () => {
   return (
     <form ref={form} onSubmit={sendEmail} className='contactForm'>
         <div className='contactFormInside'>
-            <div className='contactFormGreeting hiddenLeft'>Cześć!</div> 
-            <div className='contactFormDetails hiddenLeft'>
-              <div className='contactFormLine'><div className='contactFormInputPrefix'><label htmlFor='name'>Nazywam się</label></div><input id='name' type='text' name='name' className='contactFormInput' required autoComplete='on'/></div>
-              <div className='contactFormLine'><div className='contactFormInputPrefix'><label htmlFor='email'>Mój mail to</label></div><input id='email' type='email' name='mail' className='contactFormInput' required autoComplete='on'/></div>
+          <div className='contactFormGreeting hiddenLeft'>Cześć!</div> 
+          <div className='contactFormDetails hiddenLeft'>
+            <div className='contactFormLine'>
+              <div className='contactFormInputPrefix'>
+                <label htmlFor='name'>Nazywam się</label>
+              </div>
+              <input id='name' type='text' name='name' className='contactFormInput' required autoComplete='on'/>
             </div>
-            <div className='contactFormMessageContainer hiddenLeft'><label htmlFor='message'>Mam do Ciebie wiadomość:</label><br></br>
-                <textarea id='message' name='message' className='contactFormMessage contactFormInput' required></textarea>
+            <div className='contactFormLine'>
+              <div className='contactFormInputPrefix'>
+                <label htmlFor='email'>Mój mail to</label>
+              </div>
+              <input id='email' type='email' name='mail' className='contactFormInput' required autoComplete='on'/>
             </div>
-            <div className='contactFormButtonContainer'><input type='submit' className='contactFormButton' value='Wyślij'/></div>
+          </div>
+          <div className='contactFormMessageContainer hiddenLeft'>
+            <div className='contactFormInputPrefix'>
+              <label htmlFor='message'>Mam do Ciebie wiadomość:</label>
+            </div>
+            <textarea id='message' name='message' className='contactFormMessage contactFormInput' required></textarea>
+          </div>
+          <div className='contactFormButtonContainer'>
+            <input type='submit' className='contactFormButton' value='Wyślij'/>
+          </div>
         </div>
     </form>
   );

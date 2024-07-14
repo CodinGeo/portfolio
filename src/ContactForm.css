@@ -1,13 +1,18 @@
 .contactFormInside
 {
     display: flex;
-    justify-content: left;
     flex-direction: column;
+    justify-content: left;
+    margin: 0 0 1.5vw 0;
     font-size: 1.75vw;
 }
 .contactFormGreeting
 {
-    margin-bottom: 0.75vw;
+    margin: 0 0 0.75vw 0;
+}
+.contactFormDetails
+{
+    margin: 0 0 1.5vw 0;
 }
 .contactFormText
 {
@@ -15,10 +20,10 @@
 }
 .contactFormLine
 {
-    margin-top: 0.5vw;
-    width: 100%;
     display: flex;
     flex-direction: row;
+    width: 100%;
+    margin: 0.5vw 0 0.1vw 0;
 }
 .contactFormInputPrefix
 {
@@ -26,38 +31,37 @@
 }
 .contactFormInput
 {
-    margin-left: 0.5vw;
     display: inline-block;
     width: 100%;
     height: 1.8vw;
-    margin-top: 0.1vw;
-    padding-left: 0;
+    margin: 0 0 0 0.5vw;
+    padding: 0;
+    border-color: var(--primary-color);
+    border-style: solid;
+    border-width: 0 0 0.1vw 0;
+    background-color: var(--background-color);
     font-size: 1.8vw;
     color: var(--secondary-color);
-    border: none;
-    border-bottom: 0.1vw solid var(--primary-color);
-    background-color: var(--background-color);
 }
 .contactFormInput:focus
 {
+    border-style: dotted;
     outline: none;
-    border-bottom: 0.1vw dotted var(--primary-color);
 }
 .contactFormMessageContainer
 {
-    margin-top: 1.5vw;
+    margin: 0 0 1.5vw 0;
 }
 .contactFormMessage
 {
-    height: 13vw;
     width: 100%;
-    margin-top: 1vh;
-    margin-left: 0;
+    height: 13vw;
+    margin: 1vh 0 0 0;
     padding: 0.3vw;
-    font-size: 1.5vw;
-    resize: none;
     background-color: var(--background-color);
+    font-size: 1.5vw;
     color: var(--secondary-color);
+    resize: none;
 }
 .contactFormButtonContainer
 {
@@ -67,22 +71,69 @@
 }
 .contactFormButton
 {
-    margin-top: 1.5vw;
-    padding: 0.5vw;
     width: 13vw;
-    font-size: 2vw;
-    font-weight: bold;
-    color: var(--primary-color);
+    padding: 0.5vw;
     border: 0.2vw solid var(--primary-color);
     border-radius: 90px;
     background-color: var(--background-color);
+    font-size: 2vw;
+    font-weight: bold;
+    color: var(--primary-color);
     transition: all 0.2s ease-out;
 }
 .contactFormButton:hover
 {
+    border-color: var(--secondary-color);
     background-color: var(--secondary-color);
     color: white;
     transform: scale(1.05);
-    border-color: var(--secondary-color);
     cursor: pointer;
+}
+
+/*//////////////////// Mobilka ////////////////////*/
+@media only screen and (max-width: 750px)
+{
+    .contactFormGreeting
+    {
+        margin: 0 0 4vw 0;
+        font-size: 4vw;
+    }
+    .contactFormLine
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .contactFormLine
+    {
+        margin: 0 0 5vw 0;
+    }
+    .contactFormInputPrefix
+    {
+        margin: 0;
+        font-size: 4vw;
+    }
+    .contactFormInput
+    {
+        height: 6vw;
+        border-color: var(--primary-color);
+        border-style: solid;
+        border-width: 0 0 0.4vw 0;
+        font-size: 4vw;
+    }
+    .contactFormMessageContainer
+    {
+        margin: 0 0 4vw 0;
+    }
+    .contactFormMessage
+    {
+        height: 30vw;
+        font-size: 3.5vw;
+    }
+    .contactFormButton
+    {
+        width: 33vw;
+        padding: 2vw;
+        font-size: 6vw;
+        border-width: 0.5vw;
+    }
 }

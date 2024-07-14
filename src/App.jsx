@@ -1,7 +1,7 @@
 import {useRef, useState, useEffect} from 'react';
 import Nav from './Nav.jsx';
 import Sides from './Sides.jsx';
-import Introduction from './Introduction.jsx';
+import Introduction from './Intro.jsx';
 import About from './About.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
