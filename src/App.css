@@ -24,10 +24,26 @@ body
     --background-color: #19282A;
     --primary-color: #7EF9C2;
     --secondary-color: #4EC992;
+    --contrast-color: #58FCEC;
 }
 input
 {
     font-family: 'Rubik', 'Arial', sans-serif;
+}
+input:-webkit-autofill
+{
+    -webkit-box-shadow: 0 0 0px 100px var(--background-color) inset;
+    -webkit-text-fill-color: var(--secondary-color);
+    caret-color: var(--primary-color);
+}
+input:-webkit-autofill:focus
+{
+    border-color: var(--primary-color);
+}
+::selection
+{
+    background-color: var(--secondary-color);
+    color: var(--background-color);
 }
 button
 {
@@ -67,7 +83,7 @@ button
     opacity: 1;
     filter: none;
     transform: none;
-    transition: all 1.5s;
+    transition: opacity 1.5s ease-out, filter 1.5s ease-out, transform 1.5s ease-out;
 }
 .aboutTexts .hiddenCenter:nth-child(2)
 {
@@ -76,4 +92,8 @@ button
 .contactFormMessageContainer
 {
     transition-delay: 0.25s;
+}
+.contactFormSubmission .hiddenRight
+{
+    transition-delay: 0.75s;
 }

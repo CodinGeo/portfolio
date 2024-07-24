@@ -1,14 +1,15 @@
-.projects
+.projectsContainer
 {
+    padding: 5dvh 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 100dvh;
 }
 .projectsTitle
 {
-    margin: 0 0 3vw 0;
-    font-size: 4vw;
+    margin: 0 0 3dvw 0;
+    font-size: min(5dvw, 9dvh);
     text-align: center;
     color: var(--primary-color);
 }
@@ -20,19 +21,18 @@
 }
 .projectsListLeftColumn
 {
-    margin: 0 0.5vw 0 0;
+    margin: 0 min(0.5dvw, 1dvh) 0 0;
 }
 .projectsListRightColumn
 {
     display: flex;
     flex-direction: column;
     margin: 0;
-    gap: 0.4vw;
+    gap: min(0.5dvw, 1dvh);
 }
 .projectsListItemContainer
 {
     position: relative;
-    width: 99.95%;
     background-color: var(--secondary-color);
     transition: all 0.2s ease-out;
 }
@@ -54,8 +54,12 @@
 .projectsListItemTitleContainer
 {
     position: absolute;
-    left: 5%;
-    top: 36%;
+    top: 1%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
     margin: 0;
 }
@@ -70,17 +74,19 @@
 /*//////////////////// Mobilka ////////////////////*/
 @media only screen and (max-width: 750px)
 {
-    .projects
+    .projectsContainer
     {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 100vh;
+        height: 100dvh;
+        padding: min(2dvw, 2.5dvh) 0 0 0;
     }
     .projectsTitle
     {
-        margin: 0 0 5vw 0;
-        font-size: 8vw;
+        margin: 0 0 2dvw 0;
+        max-width: 80dvw;
+        font-size: min(8dvw, 8dvh);
         text-align: center;
         color: var(--primary-color);
     }
@@ -90,26 +96,29 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 75vw;
+        width: 75dvw;
     }
     .projectsListMobileTop
     {
         width: fit-content;
-        margin: 0 0 1.25vw 0;
+        margin: 0 0 1.25dvw 0;
     }
     .projectsListMobileBottom
     {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
         margin: 0;
-        gap: 0.4vw;
+        gap: 0.4dvw;
+    }
+    .projectsListItemContainer
+    {
+        overflow: hidden;
     }
     .projectsListContainer
     {
         position: relative;
-        overflow: hidden;
     }
     .projectsListItem
     {
@@ -123,13 +132,13 @@
         align-items: center;
         justify-content: right;
         position: absolute;
-        left: calc(100% - 22.5vw);
-        top: calc(100% - 5vw);
-        width: 22.5vw;
-        height: 5vw;
+        left: calc(100% - min(24dvw, 24dvh));
+        top: calc(100% - min(6dvw, 6dvh));
+        width: min(24dvw, 24dvh);
+        height: min(6dvw, 6dvh);
         border-radius: 90px 0 0 90px;
         background-color: var(--primary-color);
-        box-shadow: 0 0 2vw var(--primary-color);
+        box-shadow: 0 0 2dvw var(--primary-color);
     }
     .projectsListItemContainer:hover .projectsListItem
     {
@@ -141,8 +150,8 @@
     }
     .projectsListItemTitle
     {
-        margin: 0 1vw 0 0;
-        font-size: 3vw;
+        margin: 0 min(2dvw, 2dvh) 0 0;
+        font-size: min(3dvw, 3dvh);
         opacity: 1;
     }
 }

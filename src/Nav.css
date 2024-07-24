@@ -1,11 +1,18 @@
+.navWrapper
+{
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    --full-nav-border-width: min(0.2dvw, 0.5dvh);
+    --half-nav-border-width: min(0.1dvw, 0.25dvh);
+}
 .navContainer
 {
     display: flex;
-    justify-content: space-evenly;
-    position: sticky;
-    top: 3vh;
+    justify-content: center;
+    position: fixed;
+    top: min(3dvw, 1dvh);
     z-index: 3;
-    width: 35%;
     margin: auto;
     border-radius: 60%;
 }
@@ -14,11 +21,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 33.3%;
-    padding: 0.5vw 0 0.5vw 0;
+    width: 15dvh;
+    padding: 0.5dvw min(2dvw, 2.5dvh) 0.5dvw min(2dvw, 2.5dvh);
     border-color: var(--primary-color);
     border-style: solid;
-    border-width: 0.2vw 0.1vw 0.2vw 0.1vw;
+    border-width: var(--full-nav-border-width) var(--half-nav-border-width) var(--full-nav-border-width) var(--half-nav-border-width);
     background-color: var(--background-color);
     text-align: center;
     transition: all 0.2s ease-out;
@@ -27,12 +34,12 @@
 }
 .navItem:first-child
 {
-    border-width: 0.2vw 0.1vw 0.2vw 0.2vw;
+    border-width: var(--full-nav-border-width) var(--half-nav-border-width) var(--full-nav-border-width) var(--full-nav-border-width);
     border-radius: 60px 0 0 60px;
 }
 .navItem:last-child
 {
-    border-width: 0.2vw 0.2vw 0.2vw 0.1vw;
+    border-width: var(--full-nav-border-width) var(--full-nav-border-width) var(--full-nav-border-width) var(--half-nav-border-width);
     border-radius: 0 60px 60px 0;
 }
 .navItem:hover
@@ -46,7 +53,7 @@
 }
 .navItem > .navLink
 {
-    font-size: calc(10px + 1vw);
+    font-size: min(4.5dvw, 4dvh);
     font-weight: 450;
     text-decoration: none;
     color: var(--primary-color);
@@ -66,24 +73,26 @@
 {
     .navContainer
     {
-        width: 70vw;
+        width: fit-content;
+        --full-mobile-nav-border-width: min(0.25dvw, 0.6dvh);
+        --half-mobile-nav-border-width: min(0.125dvw, 0.3dvh);
     }
     .navItem
     {
+        padding: min(1dvw, 2dvh) min(1dvw, 2dvh) min(1dvw, 2dvh) min(1dvw, 2dvh);
         height: 100%;
-        padding: 1.25vw;
-        border-width: 0.25vw 0.125vw 0.25vw 0.125vw;
+        border-width: var(--full-mobile-nav-border-width) var(--half-mobile-nav-border-width) var(--full-mobile-nav-border-width) var(--half-mobile-nav-border-width);
     }
     .navItem:first-child
     {
-        border-width: 0.25vw 0.125vw 0.25vw 0.25vw;
+        border-width: var(--full-mobile-nav-border-width) var(--half-mobile-nav-border-width) var(--full-mobile-nav-border-width) var(--full-mobile-nav-border-width);
     }
     .navItem:last-child
     {
-        border-width: 0.25vw 0.25vw 0.25vw 0.125vw;
+        border-width: var(--full-mobile-nav-border-width) var(--full-mobile-nav-border-width) var(--full-mobile-nav-border-width) var(--half-mobile-nav-border-width);
     }
     .navItem > .navLink
     {
-        font-size: calc(10px + 2vw);
+        font-size: min(3dvw, 3.5dvh);
     }
 }

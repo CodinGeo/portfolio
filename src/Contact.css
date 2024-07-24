@@ -5,12 +5,12 @@
     align-items: center;
     justify-content: center;
     justify-content: center;
-    height: 100vh;
+    height: 100dvh;
 }
 .contactInfoTitle
 {
-    margin: 4vw 0 2vw 0;
-    font-size: 4vw;
+    margin: 4dvw 0 0 0;
+    font-size: min(5dvw, 9dvh);
     text-align: left;
     color: var(--primary-color);
 }
@@ -22,10 +22,14 @@
 /*//////////////////// Mobilka ////////////////////*/
 @media only screen and (max-width: 750px)
 {
+    .contactContainer
+    {
+        padding: 6dvh 0 0 0;
+    }
     .contactInfoTitle
     {
-        margin: 0 0 8vw 0;
-        font-size: 8vw;
+        margin: 0 0 min(8dvw, 3.5dvh) 0;
+        font-size: min(9dvw, 8dvh)
     }
     .contactFormContainer
     {

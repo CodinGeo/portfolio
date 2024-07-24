@@ -1,7 +1,7 @@
 import {useRef, useState, useEffect} from 'react';
 import Nav from './Nav.jsx';
 import Sides from './Sides.jsx';
-import Introduction from './Intro.jsx';
+import Intro from './Intro.jsx';
 import About from './About.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
@@ -41,29 +41,15 @@ function App()
     };
 
   },[]);
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-      else {
-        entry.target.classList.remove('visible');
-      }
-    });
-  });
-  const hiddenElements = document.querySelectorAll('.hiddenLeft, .hiddenCenter, .hiddenRight');
-  hiddenElements.forEach((element) => {
-    observer.observe(element);
-  });
   return(
     <>
       <Nav aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} currentSection={currentSection==='intro'?'about':currentSection}></Nav>
       <Sides introRef={introRef} aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} currentSection={currentSection}></Sides>
       <div className='content'>
-        <Introduction introRef={introRef} contactRef={contactRef}></Introduction>
-        <About aboutRef={aboutRef} sectionName='about'></About>
-        <Projects projectsRef={projectsRef} sectionName='projects'></Projects>
-        <Contact contactRef={contactRef} sectionName='contact'></Contact>
+        <Intro introRef={introRef} contactRef={contactRef} currentSection={currentSection}></Intro>
+        <About aboutRef={aboutRef} sectionName='about' currentSection={currentSection}></About>
+        <Projects projectsRef={projectsRef} sectionName='projects' currentSection={currentSection}></Projects>
+        <Contact contactRef={contactRef} sectionName='contact' currentSection={currentSection}></Contact>
       </div>
     </>
   );

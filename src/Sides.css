@@ -1,5 +1,6 @@
 .sideSocials
 {
+    margin: min(2dvw,1dvh) 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,9 +8,9 @@
     position: sticky;
     top: 0;
     width: fit-content;
-    height: 100vh;
-    margin: 0 0 0 1vw;
-    gap: 1vw;
+    height: calc(100dvh - min(2dvw,1dvh));
+    margin: 0 0 0 1dvw;
+    gap: 1dvw;
 }
 .sideSocialIconLink
 {
@@ -22,8 +23,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5vw;
-    height: 2.5vw;
+    width: min(2.5dvw, 7dvh);
+    height: min(2.5dvw, 7dvh);
     border-radius: 90%;
     transition: all 0.2s ease-out;
     cursor: pointer;
@@ -54,21 +55,21 @@
 }
 .sideNav
 {
+    margin: min(2dvw,1dvh) 0 0 98dvw;
     display: flex;
     flex-direction: column;
     justify-content: center;  
     position: sticky;
     top: 0;
     width: fit-content;
-    height: 100vh;
-    margin: 0 0 0 98vw;
-    gap: 0.5vw;  
+    height: calc(100dvh - min(2dvw,1dvh));
+    gap: 0.5dvw;  
 }
 .sideNavDot
 {
-    width: 0.75vw;
-    height: 0.75vw;
-    border: 0.1vw solid var(--primary-color);
+    width: min(3dvw, 2dvh);
+    height: min(3dvw, 2dvh);
+    border: min(0.1dvw, 0.25dvh) solid var(--primary-color);
     border-radius: 90%;
     transition: all 0.2s ease-out;
 }
