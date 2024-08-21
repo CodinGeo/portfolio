@@ -1,31 +1,32 @@
 .sideSocials
 {
-    margin: min(2dvw,1dvh) 0 0 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     position: sticky;
     position: sticky;
     top: 0;
+    margin: min(2dvw,1dvh) 0 0 0;
+    margin: 0 0 0 1dvw;
     width: fit-content;
     height: calc(100dvh - min(2dvw,1dvh));
-    margin: 0 0 0 1dvw;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
     gap: 1dvw;
 }
 .sideSocialIconLink
 {
-    display: block;
     position: relative;
     border-radius: 90%;
+    display: block;
 }
 .sideSocialContainer
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 90%;
     width: min(2.5dvw, 7dvh);
     height: min(2.5dvw, 7dvh);
-    border-radius: 90%;
+    background-color: var(--background-color);
+    align-items: center;
+    justify-content: center;
+    display: flex;
     transition: all 0.2s ease-out;
     cursor: pointer;
 }
@@ -35,19 +36,55 @@
 }
 .sideSocialBg
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    opacity: 0;
+    border-radius: 90%;
     width: 100%;
     height: 100%;
-    border-radius: 90%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     transition: all 0.2s ease-out;
-    opacity: 0;
 }
 .sideSocialContainer:hover .sideSocialBg
 {
     opacity: 1;
+}
+.sideSocialPhone
+{
+    position: 'relative';
+    z-index: 2;
+} 
+.sideSocialPhoneNumContainer
+{
+    position: absolute;
+    z-index: -1;
+    border-radius: 60%;
+    width: min(2.5dvw, 7dvh);
+    height: min(2.75dvw, 7.5dvh);
+    background-color: #58FCEC;
+    align-items: center;
+    justify-content: right;
+    display: flex;
+    font-size: min(1dvw, 2.5dvh);
+    color: #58FCEC;
+    transition: all 0.2s ease-out, color 0.05s ease-out;
+    overflow: hidden;
+}
+.sideSocialIconPhone:hover + .sideSocialPhoneNumContainer, .sideSocialPhoneNumContainer:hover
+{
+    margin: 0 0 0 min(0.5dvw, 0.5dvh);
+    border-radius: 20% 20% 20% 20%/90% 80% 80% 90%;
+    width: min(13.5dvw, 33.5dvh);
+    padding: 0 min(1dvw, 1dvh) 0 0;
+    color: var(--background-color);
+    transition: all 0.2s ease-out, color 0.2s cubic-bezier(1,0,1,0);
+    scale: 1.1;
+}
+.sideSovialPhoneNumCopyIco
+{
+    margin: 0 min(1dvw, 1dvh) 0 0;
+    width: min(1.5dvw, 4dvh);
 }
 .sideSocialIcon
 {
@@ -55,22 +92,22 @@
 }
 .sideNav
 {
-    margin: min(2dvw,1dvh) 0 0 98dvw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
     position: sticky;
     top: 0;
+    margin: min(2dvw,1dvh) 0 0 98dvw;
     width: fit-content;
     height: calc(100dvh - min(2dvw,1dvh));
+    flex-direction: column;
+    justify-content: center;  
+    display: flex;
     gap: 0.5dvw;  
 }
 .sideNavDot
 {
-    width: min(3dvw, 2dvh);
-    height: min(3dvw, 2dvh);
     border: min(0.1dvw, 0.25dvh) solid var(--primary-color);
     border-radius: 90%;
+    width: min(1.5dvw, 2dvh);
+    height: min(1.5dvw, 2dvh);
     transition: all 0.2s ease-out;
 }
 .sideNavDot:hover

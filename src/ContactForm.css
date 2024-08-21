@@ -1,9 +1,9 @@
 .contactFormInside
 {
-    display: flex;
+    margin: 0 0 1.5dvw 0;
     flex-direction: column;
     justify-content: left;
-    margin: 0 0 1.5dvw 0;
+    display: flex;
     font-size: min(1.75dvw, 4dvh);
 }
 .contactFormGreeting
@@ -20,10 +20,10 @@
 }
 .contactFormLine
 {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
     margin: 0.5dvw 0 0.1dvw 0;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
 }
 .contactFormInputPrefix
 {
@@ -31,22 +31,22 @@
 }
 .contactFormInput
 {
-    display: inline-block;
+    margin: 0 0 0 0.5dvw;
+    border-width: 0 0 0.1dvw 0;
+    border-style: solid;
+    border-color: var(--primary-color);
     width: 100%;
     height: 1.8dvw;
-    margin: 0 0 0 0.5dvw;
-    padding: 0;
-    border-color: var(--primary-color);
-    border-style: solid;
-    border-width: 0 0 0.1dvw 0;
     background-color: var(--background-color);
+    padding: 0;
+    display: inline-block;
     font-size: min(1.75dvw, 4dvh);
     color: var(--secondary-color);
 }
 .contactFormInput:focus
 {
-    border-style: dotted;
     outline: none;
+    border-style: dotted;
 }
 .contactFormMessageContainer
 {
@@ -54,9 +54,9 @@
 }
 .contactFormMessage
 {
-    width: 100%;
     margin: min(0.5vw, 0.5) 0 0 0;
     margin-left: 0;
+    width: 100%;
     height: min(13dvw, 25dvh);
     background-color: var(--background-color);
     font-size: min(1.5dvw, 3.5dvh);
@@ -65,19 +65,19 @@
 }
 .contactFormSubmission
 {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
 }
 .contactFormButton
 {
-    width: min(16dvw, 28dvh);
-    padding: min(1.5dvw, 1.5dvh) 0 min(1.5dvw, 1.5dvh) 0;
     border: 0.2dvw solid var(--primary-color);
     border-radius: 90px;
+    width: min(16dvw, 28dvh);
     background-color: var(--background-color);
+    padding: min(1.5dvw, 1.5dvh) 0 min(1.5dvw, 1.5dvh) 0;
     font-size: min(2.5dvw, 5dvh);
     font-weight: bold;
     color: var(--primary-color);
@@ -93,9 +93,9 @@
 }
 .contactFormButtonSent
 {
-    color: black!important;
-    background-color: var(--contrast-color)!important;
     border-color: var(--contrast-color)!important;
+    background-color: var(--contrast-color)!important;
+    color: black!important;
 }
 /*//////////////////// Mobilka ////////////////////*/
 @media only screen and (max-width: 750px)
@@ -139,5 +139,6 @@
         padding: min(2dvw, 2dvh);
         font-size: min(4.5dvw, 4.5dvh);
         border-width: min(0.4dvw, 0.5dvh);
+        margin: 0 0 0 min(-15dvw, -15dvh);
     }
 }

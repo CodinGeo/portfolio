@@ -3,7 +3,8 @@ import gitHubLogo from './assets/gitHubLogo.svg';
 import cvLogo from './assets/cvLogo.webp';
 import cvPDF from './assets/CV.pdf';
 import phoneLogo from './assets/phoneLogo.svg';
-import {useEffect} from 'react';
+import copyIcon from './assets/copyIco.svg';
+import {useEffect, useState} from 'react';
 import './Sides.css';
 function Sides({introRef, aboutRef, projectsRef, contactRef, currentSection}) {
     const handleIntroClick = () => {
@@ -32,8 +33,8 @@ function Sides({introRef, aboutRef, projectsRef, contactRef, currentSection}) {
     }, [currentSection]);
     const SideSocial = (props) => {
         return(
-            <a href={props.link} target='_blank' className='sideSocialIconLink' aria-label={props.label}>
-                <div className='sideSocialContainer' style={{border: 'min(0.15dvw, 0.4dvh) solid' + props.color}}>
+            <a href={props.link} target='_blank' className={'sideSocialIconLink'+`${props.alt==='Telefon'?' sideSocialIconPhone':''}`} aria-label={props.label}>
+                <div className='sideSocialContainer' style={{border: 'min(0.15dvw, 0.4dvh) solid' + props.color, position: props.alt==='Telefon'?'absolute':'auto'}}  >
                     <img className='sideSocialIcon' style={{filter: props.filter, height: props.height}} src={props.icon} alt={props.alt}/>
                     <div className='sideSocialBg' style={{backgroundColor: props.color}}>
                         <img className='sideSocialIcon' style={{filter: 'invert(94%) sepia(100%) saturate(0%) hue-rotate(122deg) brightness(102%) contrast(103%)', height: props.height}} src={props.icon} alt={props.alt}/>
@@ -42,13 +43,24 @@ function Sides({introRef, aboutRef, projectsRef, contactRef, currentSection}) {
             </a>
         );
     }
+    const [numberValue,setNumberValue] = useState('+48 503 409 129')
+    const numberValConst = '+48 503 409 129';
     return(
         <>
             <section className='sideSocials'>
                 <SideSocial icon={gitHubLogo} link='https://github.com/CodinGeo' height='min(2.5dvw, 7dvh)' color='#555555' filter='invert(94%) sepia(100%) saturate(0%) hue-rotate(122deg) brightness(102%) contrast(103%)' label='Profil GitHub' alt='GitHub logo'></SideSocial>
                 <SideSocial icon={cvLogo} link={cvPDF} height='min(2.5dvw, 7dvh)' color='#7EF9C2' filter='invert(90%) sepia(6%) saturate(2548%) hue-rotate(90deg) brightness(96%) contrast(104%)' label='CV' alt='CV'></SideSocial>
                 <SideSocial icon={linkedInLogo} link='https://www.linkedin.com/in/marcin-bieli%C5%84ski-9078a92a1/' height='min(1.25dvw, 3.5dvh)' color='#0e76a8' filter='invert(26%) sepia(93%) saturate(1626%) hue-rotate(177deg) brightness(95%) contrast(89%)' label='Profil LinkedIn' alt='LinkedIn logo'></SideSocial>
-                <SideSocial icon={phoneLogo} link='tel:+48503409129' height='min(2dvw, 4.5dvh)' color='#58FCEC' filter='invert(87%) sepia(18%) saturate(1226%) hue-rotate(112deg) brightness(98%) contrast(102%)' label='Telefon' alt='Telefon'></SideSocial>
+                <div className='sideSocialPhone'>
+                    <SideSocial icon={phoneLogo} link='tel:+48503409129' height='min(2dvw, 4.5dvh)' color='#58FCEC' filter='invert(87%) sepia(18%) saturate(1226%) hue-rotate(112deg) brightness(98%) contrast(102%)' label='Telefon' alt='Telefon'></SideSocial>
+                    <div className='sideSocialPhoneNumContainer'>
+                        <img className='sideSovialPhoneNumCopyIco' onClick={()=>{navigator.clipboard.writeText(numberValConst);
+                                                                                setNumberValue('Skopiowano!');
+                                                                                setTimeout(() => {setNumberValue('+48 503 409 129');}, 1000);}} src={copyIcon}>
+                        </img>
+                        <span className='phoneNum'>{numberValue}</span>
+                    </div>
+                </div>
                 {/*svgrepo.com, changed color, licence: https://www.svgrepo.com/page/licensing/#CC%20Attribution*/}
             </section>
             <section className='sideNav'>

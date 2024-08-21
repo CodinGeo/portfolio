@@ -1,10 +1,10 @@
 .projectsContainer
 {
-    padding: 5dvh 0 0 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: 100dvh;
+    flex-direction: column;
+    padding: 5dvh 0 0 0;
+    justify-content: center;
+    display: flex;
 }
 .projectsTitle
 {
@@ -15,9 +15,9 @@
 }
 .projectsListContainer
 {
-    display: flex;
     flex: row;
     justify-content: center;
+    display: flex;
 }
 .projectsListLeftColumn
 {
@@ -25,9 +25,9 @@
 }
 .projectsListRightColumn
 {
-    display: flex;
-    flex-direction: column;
     margin: 0;
+    flex-direction: column;
+    display: flex;
     gap: min(0.5dvw, 1dvh);
 }
 .projectsListItemContainer
@@ -38,9 +38,9 @@
 }
 .projectsListItem
 {
-    display: block;
     position: relative;
     z-index: 0;
+    display: block;
     transition: all 0.2s ease-out;
 }
 .projectsListItemContainer:hover .projectsListItem
@@ -55,20 +55,20 @@
 {
     position: absolute;
     top: 1%;
+    margin: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    z-index: 1;
-    margin: 0;
+    justify-content: center;
+    display: flex;
 }
 .projectsListItemTitle
 {
     margin: 0;
+    opacity: 0;
     color: white;
     transition: all 0.2s ease-out;
-    opacity: 0;
 }
 
 /*//////////////////// Mobilka ////////////////////*/
@@ -92,7 +92,6 @@
     }
     .projectsListContainer
     {
-    
         display: flex;
         flex-direction: column;
         align-items: center;

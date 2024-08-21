@@ -1,18 +1,18 @@
 .aboutContainer
 {
-    display: flex;
+    width: 100dvw;
+    height: 100dvh;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100dvw;
-    height: 100dvh;
+    display: flex;
     gap: 2dvw;
 }
 .aboutPic
 {
     margin: 0;
-    width: min(45dvw, 90dvh);
     border-radius: 20%;
+    width: min(45dvw, 90dvh);
 }
 .aboutTexts
 {
@@ -33,21 +33,21 @@
 /*//////////////////// Mobilka ////////////////////*/
 .aboutMobileContainer
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto 0 auto;
     width: 100dvw;
     height: 100dvh;
-    margin: 0 auto 0 auto;
+    flex-direction: column;
     padding: 5dvw 0 0 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 .aboutMobileHead
 {
-    display: flex;
+    margin: 0 0 0 min(7dvw, 7dvh);
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 0 0 min(7dvw, 7dvh);
+    display: flex;
 }
 .aboutMobileTitleContainer
 {

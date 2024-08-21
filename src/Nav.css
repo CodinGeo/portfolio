@@ -1,32 +1,32 @@
 .navWrapper
 {
     width: 100dvw;
-    display: flex;
     justify-content: center;
+    display: flex;
     --full-nav-border-width: min(0.2dvw, 0.5dvh);
     --half-nav-border-width: min(0.1dvw, 0.25dvh);
 }
 .navContainer
 {
-    display: flex;
-    justify-content: center;
     position: fixed;
     top: min(3dvw, 1dvh);
-    z-index: 3;
     margin: auto;
+    z-index: 3;
     border-radius: 60%;
+    justify-content: center;
+    display: flex;
 }
 .navItem
 {
-    display: flex;
+    border-width: var(--full-nav-border-width) var(--half-nav-border-width) var(--full-nav-border-width) var(--half-nav-border-width);
+    border-style: solid;
+    border-color: var(--primary-color);
+    width: 15dvh;
+    background-color: var(--background-color);
+    padding: 0.5dvw min(2dvw, 2.5dvh) 0.5dvw min(2dvw, 2.5dvh);
     align-items: center;
     justify-content: center;
-    width: 15dvh;
-    padding: 0.5dvw min(2dvw, 2.5dvh) 0.5dvw min(2dvw, 2.5dvh);
-    border-color: var(--primary-color);
-    border-style: solid;
-    border-width: var(--full-nav-border-width) var(--half-nav-border-width) var(--full-nav-border-width) var(--half-nav-border-width);
-    background-color: var(--background-color);
+    display: flex;
     text-align: center;
     transition: all 0.2s ease-out;
     float: left;
@@ -73,13 +73,14 @@
 {
     .navContainer
     {
-        width: fit-content;
+        max-width: 70dvw;
         --full-mobile-nav-border-width: min(0.25dvw, 0.6dvh);
         --half-mobile-nav-border-width: min(0.125dvw, 0.3dvh);
+        top: min(3dvw, 3dvh);
     }
     .navItem
     {
-        padding: min(1dvw, 2dvh) min(1dvw, 2dvh) min(1dvw, 2dvh) min(1dvw, 2dvh);
+        padding: min(1dvw, 2dvh) min(3dvw, 4dvh) min(1dvw, 2dvh) min(3dvw, 4dvh);
         height: 100%;
         border-width: var(--full-mobile-nav-border-width) var(--half-mobile-nav-border-width) var(--full-mobile-nav-border-width) var(--half-mobile-nav-border-width);
     }
@@ -93,6 +94,6 @@
     }
     .navItem > .navLink
     {
-        font-size: min(3dvw, 3.5dvh);
+        font-size: min(4dvw, 4.5dvh);
     }
 }

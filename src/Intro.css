@@ -8,9 +8,9 @@
 }
 .introLeft
 {
-    width: 28dvw;
-    max-width: 70dvh;
     margin: 2dvw 1dvw 0 0;
+    max-width: 70dvh;
+    width: 28dvw;
 }
 .introTopicSmall
 {
@@ -35,16 +35,16 @@
 }
 .introPic
 {
-    width: min(25dvw, 50dvh);
     border-radius: 20%;
+    width: min(25dvw, 50dvh);
 }
 .introRight
 {
-    display: flex;
+    margin: 4dvw 0 0 1.4dvw;
+    width: 20dvw;
     flex-direction: column;
     justify-content: start;
-    width: 20dvw;
-    margin: 4dvw 0 0 1.4dvw;
+    display: flex;
 }
 .introName
 {
@@ -53,11 +53,11 @@
 }
 .introNameLine
 {
-    width: min(9.7dvw, 17.46dvh);
     margin: 0 0 0 min(0.3dvw, 0.5dvh);
     border: min(0.25dvw, 0.6dvh) solid var(--primary-color);
-    transform-origin: center left;
+    width: min(9.7dvw, 17.46dvh);
     transition: all 0.3s ease-out;
+    transform-origin: center left;
 }
 .introNameContainer
 {
@@ -70,11 +70,11 @@
 }
 .introContactBtn
 {
-    width: min(18dvw, 40dvh);
-    padding: 0.5dvw;
     border: min(0.3dvw, 0.7dvh) solid var(--primary-color);
     border-radius: 90px;
+    width: min(18dvw, 40dvh);
     background-color: var(--background-color);
+    padding: 0.5dvw;
     font-size: min(2dvw, 4dvh);
     font-weight: bold;
     color: var(--primary-color);
